@@ -1,0 +1,105 @@
+/* Google Font Setup */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color:#9381FF;
+    color: #333;
+}
+
+header {
+    background-color: #8181c9;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    height: 100px;
+}
+
+header span {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #F8F7FF;
+    cursor: pointer;
+    display: block;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: #CAA8F5;
+}
+
+nav a {
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+nav a:hover {
+    background-color: #9f335d;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #2F0A28;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .socials {
+    margin-bottom: 0.5rem;
+}
+
+footer img {
+    margin: 0 0.25rem;
+    vertical-align: middle;
+}
+
+
+.course-card {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.course-card h3 {
+    margin-top: 0;
+}
+
+.course-card.completed {
+    background-color: #C7F2A7;
+    /* green tone */
+    border-color: #7db343;
+}
+
+.course-card.not-completed {
+    background-color: #fddede;
+    /* soft red/pink */
+    border-color: #e05c5c;
+}
