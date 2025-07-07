@@ -74,13 +74,13 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: true
+        completed: false
     }
 ]
 
 function renderCourses(courseList) {
     const container = document.getElementById('courseContainer');
-    container.innerHTML = ''; // Clear previous content
+    container.innerHTML = '';
 
     let totalCredits = 0;
 
@@ -89,11 +89,12 @@ function renderCourses(courseList) {
         card.classList.add('course-card');
         card.classList.add(course.completed ? 'completed' : 'not-completed');
 
+        // Ajuste nas propriedades
         card.innerHTML = `
-      <h3>${course.code}</h3>
-      <p>${course.name}</p>
+      <h3>${course.subject} ${course.number}</h3>
+      <p><strong>${course.title}</strong></p>
       <p>Credits: ${course.credits}</p>
-      <p>Status: ${course.completed ? '✅ Completed' : '❌ Not Completed'}</p>
+      <p>Status: ${course.completed ? 'Completed' : 'Not Completed'}</p>
     `;
 
         container.appendChild(card);
@@ -105,20 +106,24 @@ function renderCourses(courseList) {
 }
 
 
-// Filter functions
+
+// Filtro ALL
 document.getElementById('all').addEventListener('click', () => {
     renderCourses(courses);
 });
 
+// Filtro WDD
 document.getElementById('wdd').addEventListener('click', () => {
-    const filtered = courses.filter(c => c.code.startsWith('WDD'));
+    const filtered = courses.filter(c => c.subject === 'WDD');
     renderCourses(filtered);
 });
 
+// Filtro CSE
 document.getElementById('cse').addEventListener('click', () => {
-    const filtered = courses.filter(c => c.code.startsWith('CSE'));
+    const filtered = courses.filter(c => c.subject === 'CSE');
     renderCourses(filtered);
 });
+
 
 // Initial render
 renderCourses(courses);
