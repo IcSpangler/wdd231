@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -34,7 +34,9 @@ header span {
     cursor: pointer;
     display: block;
 }
-
+h1 {
+    font-family: 'Lato', sans-serif;
+}
 nav {
     display: none;
     flex-direction: column;
