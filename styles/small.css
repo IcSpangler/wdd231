@@ -10,7 +10,7 @@ body {
 
 header {
     background-color: #8181c9;
-    color: white;
+    color: black;
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ header span {
     font-size: 2rem;
     background: none;
     border: none;
-    color: #F8F7FF;
+    color: black;
     cursor: pointer;
     display: block;
 }
@@ -43,7 +43,7 @@ nav {
 
 nav a {
     padding: 1rem;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
