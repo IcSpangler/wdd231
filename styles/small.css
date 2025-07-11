@@ -81,6 +81,7 @@ nav a:hover {
 
 main {
     padding: 1rem;
+    
 }
 
 section {
@@ -88,6 +89,7 @@ section {
     padding: 1rem;
     background-color: white;
     border-radius: 10px;
+    margin-right: 1rem;
 }
 
 footer {
@@ -119,10 +121,12 @@ button:hover {
     padding: 1rem;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
+    
 }
 
 .course-card h3 {
     margin-top: 0;
+    margin-right: 1rem;
 }
 
 .course-card.completed {
