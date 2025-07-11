@@ -85,7 +85,6 @@ nav a {
     font-weight: bold;
 }
 nav a.active {
-    background-color: var(--accent2-color);
     color: black;
 }
 nav a:hover {
@@ -110,6 +109,7 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 1rem;
+    font-weight: bold;
 }
 button {
     padding: 0.75rem 1.25rem;

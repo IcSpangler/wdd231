@@ -1,67 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 231 Course Home Page">
-    <meta name="author" content="Isabelle Cavalcante Spangler">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="WDD 231 Course Home Page" />
+    <meta name="author" content="Isabelle Cavalcante Spangler" />
     <title>WDD 231 | Course Home Page</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+=
+    <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-   
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+        as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </noscript>
 
-    
+  
+    <link rel="stylesheet" href="styles/small.css" />
+
+    <link href="styles/larger.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link href="styles/larger.css" rel="stylesheet" />
+    </noscript>
+
+
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/courselistarray.js" defer></script>
-    </head>
-    
-    <body>
-        <header>
-            <img src="images/webdev.svg" alt="Site Logo" width="120" height="100">
-            <span>WDD 231 | Course Home Page</span>
-            <button id="menu" aria-label="Menu Button">☰</button>
-        </header>
-    
-        <nav id="navMenu">
-            <a href="index.html" class="active">Home</a>
-            <a href="chamber.html">Chamber</a>
-            <a href="final.html">Final</a>
-        </nav>
+</head>
 
+<body>
+    <header>
+        <img src="images/webdev.svg" alt="Site Logo" width="120" height="100" />
+        <span>WDD 231 | Course Home Page</span>
+        <button id="menu" aria-label="Menu Button">☰</button>
+    </header>
 
-        <main>
-            <section class="main-section">
-                <h2>Certificate Courses</h2>
-                <div id="courseContainer"></div>
+    <nav id="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="chamber.html">Chamber</a>
+        <a href="final.html">Final</a>
+    </nav>
+
+    <main>
+        <section class="main-section">
+            <h2>Certificate Courses</h2>
+            <div id="courseContainer"></div>
+        </section>
+
+        <div class="sidebar">
+            <section>
+                <h2>Filter Courses</h2>
+                <button id="all">All Courses</button>
+                <button id="wdd">WDD Courses</button>
+                <button id="cse">CSE Courses</button>
             </section>
-        
-            <div class="sidebar">
-                <section>
-                    <h2>Filter Courses</h2>
-                    <button id="all">All Courses</button>
-                    <button id="wdd">WDD Courses</button>
-                    <button id="cse">CSE Courses</button>
-                </section>
-        
-                <section>
-                    <h2>Total Credits</h2>
-                    <p id="creditCount">Total Credits: 0</p>
-                </section>
-            </div>
-        </main>
 
-    
-        <footer>
-            <p>&copy; <span id="year"></span> Isabelle Cavalcante Spangler | Utah, USA</p>
-            <p id="lastModified"></p>
-        </footer>
-    </body>
-    
-    </html>
+            <section>
+                <h2>Total Credits</h2>
+                <p id="creditCount">Total Credits: 0</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Isabelle Cavalcante Spangler | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
