@@ -1,8 +1,8 @@
-const menuButton = document.querySelector('#menu');
-const navMenu = document.querySelector('nav');
+const menuButton = document.getElementById('menu');
+const nav = document.getElementById('navMenu');
 
 menuButton.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+    nav.classList.toggle('show');
 });
 
 window.addEventListener('resize', () => {

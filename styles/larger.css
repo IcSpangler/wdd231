@@ -10,18 +10,33 @@
         display: none;
     }
 
-    main {
-        max-width: 960px;
-        margin: 0 auto;
-    }
-
     header {
         justify-content: space-between;
     }
 
-    section {
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .main-section {
+        width: 100%;
+    }
+
+    .sidebar {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
+    }
+
+    section {
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 }

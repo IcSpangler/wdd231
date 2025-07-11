@@ -29,31 +29,33 @@
         </header>
     
         <nav id="navMenu">
-            <p>Home</p>
-            <p href="chamber.html">Chamber</p>
-            <p href="final.html">Final</p>
+            <a href="index.html" class="active">Home</a>
+            <a href="chamber.html">Chamber</a>
+            <a href="final.html">Final</a>
         </nav>
 
+
         <main>
-           <h1>WDD 231 | Course Home Page</h1>
-    
-            <section>
+            <section class="main-section">
                 <h2>Certificate Courses</h2>
                 <div id="courseContainer"></div>
             </section>
-    
-            <section>
-                <h2>Filter Courses</h2>
-                <button id="all">All Courses</button>
-                <button id="wdd">WDD Courses</button>
-                <button id="cse">CSE Courses</button>
-            </section>
-    
-            <section>
-                <h2>Total Credits</h2>
-                <p id="creditCount">Total Credits: 0</p>
-            </section>
+        
+            <div class="sidebar">
+                <section>
+                    <h2>Filter Courses</h2>
+                    <button id="all">All Courses</button>
+                    <button id="wdd">WDD Courses</button>
+                    <button id="cse">CSE Courses</button>
+                </section>
+        
+                <section>
+                    <h2>Total Credits</h2>
+                    <p id="creditCount">Total Credits: 0</p>
+                </section>
+            </div>
         </main>
+
     
         <footer>
             <p>&copy; <span id="year"></span> Isabelle Cavalcante Spangler | Utah, USA</p>
