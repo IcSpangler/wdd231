@@ -1,32 +1,22 @@
-@media (min-width: 640px) {
+@media (min-width: 600px) {
     nav {
         display: flex !important;
         flex-direction: row;
         justify-content: center;
-        gap: 2rem;
-    }
-
-    #menu {
-        display: none;
+        gap: 1rem;
     }
 
     header {
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-    }
-
-    main {
-        max-width: 960px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        /* Conteúdo principal maior que sidebar */
-        gap: 2rem;
-        align-items: flex-start;
+        align-items: center;
+        text-align: left;
+        padding: 1rem 2rem;
     }
 
     .main-section {
         width: 100%;
-        /* OK */
     }
 
     .sidebar {
@@ -41,17 +31,15 @@
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    
+
     .about-section {
-            flex-direction: column;
-        }
-    
-        header {
-            flex-direction: column;
-            text-align: center;
-        }
-    
-        nav {
-            flex-direction: column;
-        }
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .about-me,
+    .student-photo {
+        flex: 1;
+    }
 }
