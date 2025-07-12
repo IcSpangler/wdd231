@@ -1,4 +1,4 @@
-@media (min-width: 650px) {
+@media (min-width: 640px) {
     nav {
         display: flex !important;
         /* Evite usar !important se possível */
@@ -42,4 +42,17 @@
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+    
+    .about-section {
+            flex-direction: column;
+        }
+    
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        nav {
+            flex-direction: column;
+        }
 }

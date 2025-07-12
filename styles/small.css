@@ -125,6 +125,30 @@ button {
 button:hover {
     background-color: #9f335d;
 }
+/*ABOUT ME */ 
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 1rem;
+}
+
+.about-me,
+.student-photo {
+    flex: 1;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    min-width: 250px;
+}
+
+.student-photo img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
 
 /*COURSE*/
 
@@ -152,4 +176,25 @@ button:hover {
     background-color: #fddede;
     /* soft red/pink */
     border-color: #e05c5c;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+#courseContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#courseContainer .course-card {
+    width: 150px;
+    text-align: center;
 }
