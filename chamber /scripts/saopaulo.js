@@ -47,3 +47,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lastModified = new Date(document.lastModified);
     document.getElementById('lastModified').textContent = lastModified.toLocaleString();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu');
+    const navMenu = document.getElementById('navMenu');
+
+    // Quando o botão do menu for clicado, alternamos a visibilidade do menu
+    menuButton.addEventListener('click', () => {
+        navMenu.classList.toggle('open'); // Alterna a classe 'open'
+    });
+});
