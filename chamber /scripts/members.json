@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Tech Solutions",
+        "address": "Av. Paulista, 1234",
+        "phone": "(11) 1234-5678",
+        "website": "https://techsolutions.com.br",
+        "image": "tech.png",
+        "membership": 3
+    },
+    {
+        "name": "Loja do João",
+        "address": "Rua Augusta, 567",
+        "phone": "(11) 9876-5432",
+        "website": "https://lojadojoao.com",
+        "image": "joao.png",
+        "membership": 1
+    },
+    {
+        "name": "Pizzaria Bella",
+        "address": "Rua das Flores, 88",
+        "phone": "(11) 2222-3333",
+        "website": "https://bellapizza.com",
+        "image": "bella.png",
+        "membership": 2
+    },
+    {
+        "name": "Studio Fit",
+        "address": "Av. Saúde, 999",
+        "phone": "(11) 4444-5555",
+        "website": "https://studiofit.com",
+        "image": "fit.png",
+        "membership": 1
+    },
+    {
+        "name": "Escola ABC",
+        "address": "Rua Ensino, 321",
+        "phone": "(11) 6666-7777",
+        "website": "https://escolaabc.com",
+        "image": "abc.png",
+        "membership": 3
+    },
+    {
+        "name": "Contabilidade Total",
+        "address": "Av. Fiscal, 55",
+        "phone": "(11) 8888-9999",
+        "website": "https://contatotal.com",
+        "image": "conta.png",
+        "membership": 2
+    },
+    {
+        "name": "Floricultura Amor e Flor",
+        "address": "Rua Romântica, 7",
+        "phone": "(11) 1010-1111",
+        "website": "https://amoreflor.com",
+        "image": "flor.png",
+        "membership": 1
+    }
+]
