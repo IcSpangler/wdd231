@@ -4,49 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | São Paulo Chamber of Commerce</title>
-    <meta name="description"
-        content="Directory page of the São Paulo Chamber of Commerce. Discover local businesses and connect with the community." />
+    <title>São Paulo Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the São Paulo Chamber of Commerce. Get news, weather, events, and featured businesses." />
     <meta name="author" content="Isabelle C Spangler" />
     <link rel="icon" href="images/favicon.ico">
 
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="São Paulo Chamber of Commerce" />
-    <meta property="og:description" content="Discover and connect with local businesses in São Paulo." />
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?202110180743" />
-    <meta property="og:site_name" content="São Paulo Chamber of Commerce">
-    <meta property="og:url" content="https://IcSpangler.github.io/wdd231/chamber/directory.html" />
+    <!-- FONT -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </noscript>
 
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css" />
 </head>
 
 <body>
     <header>
-        <h1>São Paulo Chamber of Commerce</h1>
+        <img src="images/logo.png" alt="Timbuktu Chamber of Commerce Logo" width="150" height="100" />
+        <h1>Timbuktu Chamber of Commerce</h1>
+        <button id="menu" aria-label="Menu Button">☰</button>
+
         <nav>
-            <a href="directory.html">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="directory.html" class="active">Directory</a>
-            <a href="join.html">Join</a>
+            <nav id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="directory.html" class="active">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+            </nav>
         </nav>
     </header>
 
     <main>
-        <h2>Member Businesses</h2>
-        <div class="view-buttons">
-            <button id="gridView">Grid View</button>
-            <button id="listView">List View</button>
-        </div>
-        <div id="members" class="grid"></div>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Timbuktu Chamber of Commerce</h2>
+                <p>Your community hub for local businesses and events.</p>
+                <button>Keynote Tickets</button>
+            </div>
+        </section>
+
+        <section class="weather-info">
+            <div class="weather">
+                <h3>Current Weather</h3>
+                <p>75°F - Party Cloudy</p>
+                <p>High: 85°F | Low: 52°F</p>
+                <p>Humidity: 34% | Sunrise: 7:30 AM | Sunset: 9:59 PM</p>
+            </div>
+            <div class="forecast">
+                <h3>Weather Forecast</h3>
+                <p>Today: 90°F</p>
+                <p>Wednesday: 89°F</p>
+                <p>Thursday: 68°F</p>
+            </div>
+        </section>
+
+        <section class="events">
+            <h3>Upcoming Events</h3>
+            <div class="event-list">
+                <div class="event">
+                    <h4>Business Networking Event</h4>
+                    <p>Join local business owners for a networking session.</p>
+                </div>
+                <div class="event">
+                    <h4>Annual Keynote Speech</h4>
+                    <p>Listen to inspiring talks from community leaders.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="businesses">
+            <h3>Member Businesses</h3>
+            <div class="business-list">
+                <div class="business">
+                    <h4>Business Name</h4>
+                    <p>Business Tag Line</p>
+                    <p>Email: info@gmail.com</p>
+                    <p>Phone: 800-555-1234</p>
+                    <p>Website: mybusiness.com</p>
+                </div>
+                <div class="business">
+                    <h4>Business Name</h4>
+                    <p>Business Tag Line</p>
+                    <p>Email: info@gmail.com</p>
+                    <p>Phone: 800-555-1234</p>
+                    <p>Website: mybusiness.com</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> São Paulo Chamber of Commerce</p>
-        <p>Isabelle Cavalcante Spangler | WDD 231</p>
+        <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
+        <p>Marie Martinez | WDD 231</p>
         <p>Last modified: <span id="lastModified"></span></p>
+
+        <div class="social-links">
+            <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+            <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
     </footer>
 
     <script src="scripts/date.js"></script>

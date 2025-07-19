@@ -1,57 +1,149 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+/* Root Variables */
+:root {
+    --primary-color: #1A374D;
+    --secondary-color: #6998AB;
+    --background-color: #F9F9F9;
+    --text-color: #1A1A1A;
+    --accent-color: #406882;
+
+    --font-family: 'Roboto', sans-serif;
 }
 
-header,
-footer {
-    background-color: #003366;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+header button {
+    font-size: 24px;
+    background: none;
+    color: #fff;
+    border: none;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     margin: 0 10px;
     text-decoration: none;
 }
 
-main {
-    padding: 1rem;
+nav a.active {
+    text-decoration: underline;
 }
 
-.view-buttons {
+.hero {
+    background: url('images/hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 50px 0;
     text-align: center;
-    margin-bottom: 1rem;
 }
 
-#members.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+.hero-content {
+    color: #fff;
 }
 
-#members.list {
+.hero h2 {
+    font-size: 40px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.weather-info {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-#members section {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    background-color: #f9f9f9;
+.weather,
+.forecast {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.weather-info h3 {
+    font-size: 24px;
+}
+
+.events {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.events .event-list {
+    display: flex;
+    gap: 20px;
+}
+
+.event {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.businesses {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.business-list {
+    display: flex;
+    gap: 20px;
+}
+
+.business {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
+    padding: 20px;
 }
 
-#members img {
-    max-width: 100px;
+footer .social-links a {
+    margin: 0 10px;
+}
+
+footer .social-links img {
+    width: 30px;
     height: auto;
-}
-
-footer p {
-    margin: 0.3rem;
 }
