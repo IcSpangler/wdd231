@@ -1,59 +1,65 @@
-{
-    "members": [
-        {
-            "name": "Sunrise Bakery",
-            "address": "123 Main St, São Paulo",
-            "phone": "11-9999-1234",
-            "website": "https://sunrisebakery.com",
-            "membership": 3,
-            "description": "Fresh baked goods every day."
-        },
-        {
-            "name": "Green Valley Landscaping",
-            "address": "456 Garden Ave, São Paulo",
-            "phone": "11-8888-5678",
-            "website": "https://greenvalleylandscaping.com",
-            "membership": 2,
-            "description": "Landscaping and maintenance services."
-        },
-        {
-            "name": "TechWave Solutions",
-            "address": "789 Silicon Blvd, São Paulo",
-            "phone": "11-7777-3456",
-            "website": "https://techwave.com",
-            "membership": 3,
-            "description": "Innovative software for small businesses."
-        },
-        {
-            "name": "Paulista Gym",
-            "address": "321 Fit Rd, São Paulo",
-            "phone": "11-6666-2345",
-            "website": "https://paulistagym.com",
-            "membership": 1,
-            "description": "Health and fitness for all ages."
-        },
-        {
-            "name": "Coffee Corner",
-            "address": "654 Brew Ln, São Paulo",
-            "phone": "11-5555-4321",
-            "membership": 2,
-            "description": "Your favorite local coffee spot."
-        },
-        {
-            "name": "São Paulo Bookstore",
-            "address": "987 Book St, São Paulo",
-            "phone": "11-4444-8765",
-            "website": "https://spbookstore.com",
-            "membership": 1,
-            "description": "Books, gifts, and more."
-        },
-        {
-            "name": "Bright Minds Academy",
-            "address": "135 Education Way, São Paulo",
-            "phone": "11-3333-7890",
-            "website": "https://brightminds.com",
-            "membership": 3,
-            "description": "Educational programs for children and adults."
-        }
-    ]
-}
+[
+    {
+        "name": "Tech Innovators",
+        "address": "123 Innovation Rd, Cityville, ST 12345",
+        "phone": "123-456-7890",
+        "website": "https://www.techinnovators.com",
+        "image": "tech-innovators.jpg",
+        "membershipLevel": 3,
+        "additionalInfo": "Leaders in AI technology."
+    },
+    {
+        "name": "Green Earth Solutions",
+        "address": "456 Green St, Eco City, EC 54321",
+        "phone": "234-567-8901",
+        "website": "https://www.greenearth.com",
+        "image": "green-earth-solutions.jpg",
+        "membershipLevel": 2,
+        "additionalInfo": "Sustainable solutions for a better planet."
+    },
+    {
+        "name": "Creative Studios",
+        "address": "789 Creative Blvd, Art Town, AT 67890",
+        "phone": "345-678-9012",
+        "website": "https://www.creativestudios.com",
+        "image": "creative-studios.jpg",
+        "membershipLevel": 1,
+        "additionalInfo": "Design and branding experts."
+    },
+    {
+        "name": "Paulista Gym",
+        "address": "321 Fit Rd, São Paulo",
+        "phone": "11-6666-2345",
+        "website": "https://www.paulistagym.com",
+        "image": "gym.jpg",
+        "membershipLevel": 3,
+        "additionalInfo": "Health and fitness for all ages."
+    },
+    {
+        "name": "Coffee Corner",
+        "address": "654 Brew Ln, São Paulo",
+        "phone": "11-5555-4321",
+        "website": "https://www.coffeecorner.com",
+        "image": "coffee.jpg",
+        "membershipLevel": 2,
+        "additionalInfo": "Your favorite local coffee spot."
+    },
+    {
+        "name": "São Paulo Bookstore",
+        "address": "987 Book St, São Paulo",
+        "phone": "11-4444-8765",
+        "website": "https://www.spbookstore.com",
+        "image": "bookstore.jpg",
+        "membershipLevel": 1,
+        "additionalInfo": "Books, gifts, and more."
+    },
+    {
+        "name": "Bright Minds Academy",
+        "address": "135 Education Way, São Paulo",
+        "phone": "11-3333-7890",
+        "website": "https://www.brightminds.com",
+        "image": "academy.jpg",
+        "membershipLevel": 3,
+        "additionalInfo": "Educational programs for children and adults."
+    }
+]

@@ -8,7 +8,18 @@
     <meta name="description"
         content="Welcome to the São Paulo Chamber of Commerce. Get news, weather, events, and featured businesses." />
     <meta name="author" content="Isabelle C Spangler" />
-    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="São Paulo Chamber of Commerce" />
+    <meta property="og:description"
+        content="Directory page for local businesses in São Paulo. Discover businesses and events in your community." />
+    <meta property="og:image" content="images/sp-chamber-logo.jpg" />
+    <meta property="og:url" content="https://IcSpangler.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:type" content="website" />
+    
+
+    <!-- Favicon -->
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- FONT -->
     <link rel="preload"
@@ -19,14 +30,14 @@
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet" />
     </noscript>
+     <link rel="stylesheet" href="styles/small.css" />
 
-    <link rel="stylesheet" href="styles/small.css" />
+
 </head>
-
 <body>
     <header>
         <img src="images/sp.webp" alt="SP Logo" width="150" height="100" />
-        <h1>São Paulo Chamber of Commerce</h1>
+            <h1>São Paulo Chamber of Commerce</h1>
 
         <nav>
             <nav id="navMenu">
@@ -42,37 +53,31 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <img src="images/hero.jpg" />
+                <img src="images/hero.jpg" alt="Hero image" />
                 <h2>Welcome to São Paulo Chamber of Commerce</h2>
                 <p>Your community hub for local businesses and events.</p>
             </div>
-            <button class="keynote-tickets">Keynote Tickets</button>
+            <button>Keynote Tickets</button>
         </section>
 
-        <h3>Member Businesses</h3>
-        <div class="menu">
-            <button id="grid">Grid View</button>
-            <button id="list">List View</button>
-        </div>
+        <section class="weather-info">
+            <div class="weather">
+                <h3>Current Weather</h3>
+                <p>75°F - Party Cloudy</p>
+                <p>High: 85°F | Low: 52°F</p>
+                <p>Humidity: 34% | Sunrise: 7:30 AM | Sunset: 9:59 PM</p>
+            </div>
 
-        <article class="grid">
-           <section>
-            <img
-            src="images/tech.jpeg"/>
-            <h3>Tech Innovators</h3>
-            <p>Leaders in AI technology.</p>
-            <a href="www.techinnovators.com"></a>
-           </section>
-           <section>
-            <img 
-            src=""
-           </section>
-        </article>
+            <div class="forecast">
+                <h3>Weather Forecast</h3>
+                <p>Today: 90°F</p>
+                <p>Wednesday: 89°F</p>
+                <p>Thursday: 68°F</p>
+            </div>
 
-
-        <section class="info-row">
-            <div class="card">
-                <h3>Upcoming Events</h3>
+        <section class="events">
+            <h3>Upcoming Events</h3>
+            <div class="event-list">
                 <div class="event">
                     <h4>Business Networking Event</h4>
                     <p>Join local business owners for a networking session.</p>
@@ -82,19 +87,18 @@
                     <p>Listen to inspiring talks from community leaders.</p>
                 </div>
             </div>
-            <div class="card">
-                <h3>Current Weather</h3>
-                <p>75°F - Party Cloudy</p>
-                <p>High: 85°F | Low: 52°F</p>
-                <p>Humidity: 34% | Sunrise: 7:30 AM | Sunset: 9:59 PM</p>
-            </div>
-            <div class="card">
-                <h3>Weather Forecast</h3>
-                <p>Today: 90°F</p>
-                <p>Wednesday: 89°F</p>
-                <p>Thursday: 68°F</p>
-            </div>
         </section>
+
+
+        <h3>Member Businesses</h3>
+        <div class="menu">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
+
+        <article id="members" class="grid">
+            <!-- Member data will be injected here -->
+        </article>
     </main>
 
     <footer>
@@ -103,7 +107,7 @@
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="scripts/sp.js"></script>
+    <script src="scripts/saopaulo.js"></script>
 </body>
 
 </html>
