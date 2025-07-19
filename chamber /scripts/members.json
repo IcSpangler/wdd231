@@ -1,58 +1,67 @@
-[
-    {
-        "name": "Tech Solutions",
-        "address": "Av. Paulista, 1234",
-        "phone": "(11) 1234-5678",
-        "website": "https://techsolutions.com.br",
-        "image": "tech.png",
-        "membership": 3
-    },
-    {
-        "name": "Loja do João",
-        "address": "Rua Augusta, 567",
-        "phone": "(11) 9876-5432",
-        "website": "https://lojadojoao.com",
-        "image": "joao.png",
-        "membership": 1
-    },
-    {
-        "name": "Pizzaria Bella",
-        "address": "Rua das Flores, 88",
-        "phone": "(11) 2222-3333",
-        "website": "https://bellapizza.com",
-        "image": "bella.png",
-        "membership": 2
-    },
-    {
-        "name": "Studio Fit",
-        "address": "Av. Saúde, 999",
-        "phone": "(11) 4444-5555",
-        "website": "https://studiofit.com",
-        "image": "fit.png",
-        "membership": 1
-    },
-    {
-        "name": "Escola ABC",
-        "address": "Rua Ensino, 321",
-        "phone": "(11) 6666-7777",
-        "website": "https://escolaabc.com",
-        "image": "abc.png",
-        "membership": 3
-    },
-    {
-        "name": "Contabilidade Total",
-        "address": "Av. Fiscal, 55",
-        "phone": "(11) 8888-9999",
-        "website": "https://contatotal.com",
-        "image": "conta.png",
-        "membership": 2
-    },
-    {
-        "name": "Floricultura Amor e Flor",
-        "address": "Rua Romântica, 7",
-        "phone": "(11) 1010-1111",
-        "website": "https://amoreflor.com",
-        "image": "flor.png",
-        "membership": 1
-    }
-]
+{
+    "members": [
+        {
+            "name": "Sunrise Bakery",
+            "address": "123 Main St, São Paulo",
+            "phone": "11-9999-1234",
+            "website": "https://sunrisebakery.com",
+            "image": "sunrise.png",
+            "membership": 3,
+            "description": "Fresh baked goods every day."
+        },
+        {
+            "name": "Green Valley Landscaping",
+            "address": "456 Garden Ave, São Paulo",
+            "phone": "11-8888-5678",
+            "website": "https://greenvalleylandscaping.com",
+            "image": "greenvalley.png",
+            "membership": 2,
+            "description": "Landscaping and maintenance services."
+        },
+        {
+            "name": "TechWave Solutions",
+            "address": "789 Silicon Blvd, São Paulo",
+            "phone": "11-7777-3456",
+            "website": "https://techwave.com",
+            "image": "techwave.png",
+            "membership": 3,
+            "description": "Innovative software for small businesses."
+        },
+        {
+            "name": "Paulista Gym",
+            "address": "321 Fit Rd, São Paulo",
+            "phone": "11-6666-2345",
+            "website": "https://paulistagym.com",
+            "image": "gym.png",
+            "membership": 1,
+            "description": "Health and fitness for all ages."
+        },
+        {
+            "name": "Coffee Corner",
+            "address": "654 Brew Ln, São Paulo",
+            "phone": "11-5555-4321",
+            "website": "https://coffeecorner.com",
+            "image": "coffee.png",
+            "membership": 2,
+            "description": "Your favorite local coffee spot."
+        },
+        {
+            "name": "São Paulo Bookstore",
+            "address": "987 Book St, São Paulo",
+            "phone": "11-4444-8765",
+            "website": "https://spbookstore.com",
+            "image": "bookstore.png",
+            "membership": 1,
+            "description": "Books, gifts, and more."
+        },
+        {
+            "name": "Bright Minds Academy",
+            "address": "135 Education Way, São Paulo",
+            "phone": "11-3333-7890",
+            "website": "https://brightminds.com",
+            "image": "academy.png",
+            "membership": 3,
+            "description": "Educational programs for children and adults."
+        }
+    ]
+}
