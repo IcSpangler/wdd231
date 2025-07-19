@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join | São Paulo Chamber of Commerce</title>
+    <meta name="description"
+        content="Join the São Paulo Chamber of Commerce. Choose a membership level and apply today.">
+    <meta name="author" content="Isabelle Cavalcante Spangler">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Join the Chamber">
+    <meta property="og:description" content="Explore membership options: Non-profit, Silver, and Gold.">
+    <meta property="og:image" content="https://seulink.github.io/wdd231/chamber/images/og-join.jpg">
+    <meta property="og:url" content="https://seulink.github.io/wdd231/chamber/join.html">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>São Paulo Chamber of Commerce</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" class="active">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Membership Application</h2>
+        <p>Select a membership level that fits your organization:</p>
+
+        <form id="joinForm">
+            <label>
+                <input type="radio" name="level" value="1" required>
+                Non-profit – $0/year
+            </label><br>
+            <label>
+                <input type="radio" name="level" value="2">
+                Silver – $100/year
+            </label><br>
+            <label>
+                <input type="radio" name="level" value="3">
+                Gold – $250/year
+            </label><br><br>
+
+            <div id="perks">
+                <!-- Optionally use JS to show perks dynamically -->
+            </div>
+
+            <fieldset>
+                <legend>Organization Information</legend>
+                <label>Name:<br><input type="text" name="orgName" required></label><br>
+                <label>Address:<br><input type="text" name="orgAddress" required></label><br>
+                <label>Phone:<br><input type="tel" name="orgPhone" required></label><br>
+                <label>Website:<br><input type="url" name="orgWebsite"></label><br>
+            </fieldset>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> São Paulo Chamber of Commerce</p>
+        <p>Isabelle Cavalcante Spangler | WDD 231</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // Highlights perks based on membership level
+        const perksDiv = document.getElementById('perks');
+        document.getElementById('joinForm').level.forEach(radio => {
+            radio.addEventListener('change', () => {
+                let perks = '';
+                switch (radio.value) {
+                    case '1':
+                        perks = '<ul><li>Directory listing</li><li>Newsletter access</li></ul>';
+                        break;
+                    case '2':
+                        perks = '<ul><li>All non‑profit perks</li><li>Social media promotion</li></ul>';
+                        break;
+                    case '3':
+                        perks = '<ul><li>All silver perks</li><li>Event sponsorship</li><li>Featured ads</li></ul>';
+                        break;
+                }
+                perksDiv.innerHTML = perks;
+            });
+        });
+
+        // Footer scripts
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>
