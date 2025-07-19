@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>São Paulo Chamber of Commerce</title>
-    <meta name="description" content="Welcome to the São Paulo Chamber of Commerce. Get news, weather, events, and featured businesses." />
+    <meta name="description"
+        content="Welcome to the São Paulo Chamber of Commerce. Get news, weather, events, and featured businesses." />
     <meta name="author" content="Isabelle C Spangler" />
     <link rel="icon" href="images/favicon.ico">
 
@@ -26,7 +27,6 @@
     <header>
         <img src="images/sp.webp" alt="SP Logo" width="150" height="100" />
         <h1>São Paulo Chamber of Commerce</h1>
-        
 
         <nav>
             <nav id="navMenu">
@@ -42,11 +42,23 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <img src="images/hero.jpg"/>
+                <img src="images/hero.jpg" />
                 <h2>Welcome to São Paulo Chamber of Commerce</h2>
                 <p>Your community hub for local businesses and events.</p>
             </div>
             <button class="keynote-tickets">Keynote Tickets</button>
+        </section>
+
+        <!-- Toggle View Buttons -->
+        <div class="view-buttons">
+            <button id="gridView">Grid View</button>
+            <button id="listView">List View</button>
+        </div>
+        
+        <!-- Member Businesses Section -->
+        <section class="businesses">
+            <h3>Member Businesses</h3>
+            <div id="members" class="grid-view"></div>
         </section>
 
         <section class="info-row">
@@ -74,28 +86,6 @@
                 <p>Thursday: 68°F</p>
             </div>
         </section>
-            </div>
-        </section>
-
-        <section class="businesses">
-            <h3>Member Businesses</h3>
-            <div class="business-list">
-                <div class="business">
-                    <h4>Business Name</h4>
-                    <p>Business Tag Line</p>
-                    <p>Email: info@gmail.com</p>
-                    <p>Phone: 800-555-1234</p>
-                    <p>Website: mybusiness.com</p>
-                </div>
-                <div class="business">
-                    <h4>Business Name</h4>
-                    <p>Business Tag Line</p>
-                    <p>Email: info@gmail.com</p>
-                    <p>Phone: 800-555-1234</p>
-                    <p>Website: mybusiness.com</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -104,6 +94,7 @@
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
 
+    <script src="scripts/scripts.js"></script>
     <script src="scripts/date.js"></script>
 </body>
 
