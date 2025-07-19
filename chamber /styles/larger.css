@@ -1,0 +1,6 @@
+/* Responsividade */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+}
