@@ -72,30 +72,21 @@ nav a.active {
 .hero {
     display: flex;
     justify-content: center;
-    /* Centraliza o conteúdo horizontalmente */
     align-items: center;
-    /* Centraliza o conteúdo verticalmente */
     background: url('images/hero.jpg') no-repeat center center;
     background-size: cover;
-    /* A imagem irá cobrir toda a área */
     height: 100vh;
-    /* A hero section ocupa toda a altura da tela */
     width: 100%;
     padding: 1rem;
-    /* Padding ajustado */
     margin-bottom: 2rem;
-    /* Espaçamento entre a hero e a próxima seção */
     position: relative;
 }
 
-/* Hero Content */
 .hero-content {
     color: var(--secondary-color);
     max-width: 50%;
-    /* Limita a largura do conteúdo */
     text-align: center;
     z-index: 1;
-    /* Garante que o texto fique sobre a imagem */
 }
 
 .hero h2 {
@@ -127,7 +118,6 @@ nav a.active {
     padding: 20px;
     border-radius: 5px;
     width: 30%;
-    /* Tamanho fixo para os cards na grid */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -207,7 +197,6 @@ footer .social-links img {
 
     .card {
         width: 100%;
-        /* Ajuste para mobile */
         margin-bottom: 20px;
     }
 
@@ -218,7 +207,6 @@ footer .social-links img {
 
     .business {
         width: 80%;
-        /* Ajusta o tamanho dos cartões no mobile */
         margin-bottom: 20px;
     }
 
@@ -266,32 +254,7 @@ footer .social-links img {
     }
 }
 
-/* Grid and List View - Toggle functionality */
-#members.grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-#members.list-view {
-    display: block;
-}
-
-.member-card {
-    background-color: #fff;
-    padding: 15px;
-    margin: 15px;
-    width: 250px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.member-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
+/* General Styles for Member Cards */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -306,32 +269,58 @@ header {
     padding: 1rem;
 }
 
-nav button {
-    background-color: #6998AB;
+h1 {
+    margin: 0;
+}
+
+#navMenu a {
     color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+#navMenu a.active {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('images/hero.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+.keynote-tickets {
     padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+/* Grid and List View Styles */
+.menu button {
+    padding: 10px 20px;
+    background-color: #1A374D;
+    color: white;
     border: none;
     cursor: pointer;
     margin: 10px;
 }
 
-nav button:hover {
+.menu button:hover {
     background-color: #406882;
 }
 
-#members {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    margin-top: 20px;
-}
-
+/* Member Cards */
 .member-card {
     background-color: white;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     text-align: center;
 }
 
@@ -342,28 +331,27 @@ nav button:hover {
     margin-bottom: 15px;
 }
 
-.member-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+/* Grid View */
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.member-card a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-#members.list-view {
+/* List View */
+#members.list {
     display: block;
 }
 
-#members.list-view .member-card {
+#members.list .member-card {
     width: 100%;
     margin-bottom: 20px;
 }
 
+/* Footer */
 footer {
-    text-align: center;
     background-color: #1A374D;
     color: white;
-    padding: 10px;
+    text-align: center;
+    padding: 20px;
 }
