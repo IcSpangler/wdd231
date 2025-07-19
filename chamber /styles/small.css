@@ -19,15 +19,16 @@
 body {
     font-family: 'Roboto Condensed', sans-serif;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 
 header {
+    background-color: var(--primary-color);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
-    padding: 10px;
+    padding: 2rem;
 }
 
 header img {
@@ -38,13 +39,23 @@ header img {
 header h1 {
     color: #fff;
     font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
 }
 
-header button {
-    font-size: 24px;
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+#menu {
+    font-size: 2rem;
     background: none;
-    color: #fff;
     border: none;
+    color: white;
+    cursor: pointer;
 }
 
 nav a {
@@ -57,64 +68,79 @@ nav a.active {
     text-decoration: underline;
 }
 
+/* Hero Section */
 .hero {
-    background: url('images/hero-image.jpg') no-repeat center center;
+    display: flex;
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    background: url('images/hero.jpg') no-repeat center center;
+    /* Centraliza a imagem de fundo */
     background-size: cover;
-    padding: 50px 0;
-    text-align: center;
+    /* A imagem irá cobrir toda a área */
+    height: 100vh;
+    /* A hero section ocupa toda a altura da tela */
+    width: 100%;
+    /* A hero section ocupa toda a largura */
+    padding: 1rem;
+    /* Remove o padding */
+    margin-bottom: 2rem;
+    /* Reduz o espaço entre a hero e a seção abaixo */
+    position: relative;
 }
 
+/* Hero Content */
 .hero-content {
-    color: #fff;
+    color: var(--secondary-color);
+    max-width: 50%;
+    /* Limita a largura do conteúdo */
+    text-align: center;
+    z-index: 1;
+    /* Garante que o texto fique sobre a imagem */
 }
 
 .hero h2 {
     font-size: 40px;
+    margin-bottom: 20px;
 }
 
-button {
+.keynote-tickets {
     padding: 10px 20px;
     background-color: #007BFF;
     border: none;
     color: white;
     cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 1;
+    /* Garante que o botão fique acima da imagem */
 }
 
-.weather-info {
+/* Info Row Section */
+.info-row {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-}
-
-.weather,
-.forecast {
-    width: 45%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.weather-info h3 {
-    font-size: 24px;
-}
-
-.events {
     padding: 30px;
-    background-color: #fff;
-}
-
-.events .event-list {
-    display: flex;
     gap: 20px;
+    margin-top: -30px;
+    /* Remove o espaço extra acima da row de eventos */
 }
 
-.event {
-    width: 45%;
+.card {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
+    width: 30%;
+    /* All cards have the same width */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Businesses Section */
 .businesses {
     padding: 30px;
     background-color: #fff;
@@ -130,10 +156,11 @@ button {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -146,4 +173,99 @@ footer .social-links a {
 footer .social-links img {
     width: 30px;
     height: auto;
+}
+
+/* ----- Media Queries for Responsiveness ----- */
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    header img {
+        width: 100px;
+        height: auto;
+    }
+
+    .hero {
+        height: 70vh;
+        /* Reduz a altura da hero section em telas menores */
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .keynote-tickets {
+        margin-top: 20px;
+    }
+
+    .info-row {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .business-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .business {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    footer .social-links {
+        margin-top: 20px;
+    }
+}
+
+/* Tablet Styles (small desktop) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .info-row {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .card {
+        width: 48%;
+        /* Adjust the card width for tablet */
+    }
+
+    .business-list {
+        flex-direction: column;
+    }
+
+    .business {
+        width: 90%;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .info-row {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 30%;
+        /* All cards have the same width */
+    }
+
+    .business-list {
+        flex-direction: row;
+    }
+
+    .business {
+        width: 45%;
+    }
 }
