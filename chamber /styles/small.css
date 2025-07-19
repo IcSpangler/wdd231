@@ -292,3 +292,78 @@ footer .social-links img {
     height: 150px;
     object-fit: cover;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #1A374D;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav button {
+    background-color: #6998AB;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+nav button:hover {
+    background-color: #406882;
+}
+
+#members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.member-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.member-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.member-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.member-card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#members.list-view {
+    display: block;
+}
+
+#members.list-view .member-card {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #1A374D;
+    color: white;
+    padding: 10px;
+}
