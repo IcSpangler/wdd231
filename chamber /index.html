@@ -65,17 +65,47 @@
             </section>
 
         </section>
+    <section class="info-row">
+        <div class="card">
+            <h3>Upcoming Events</h3>
+            <div class="event">
+                <h4>Business Networking Event</h4>
+                <p>Join local business owners for a networking session.</p>
+            </div>
+            <div class="event">
+                <h4>Annual Keynote Speech</h4>
+                <p>Listen to inspiring talks from community leaders.</p>
+            </div>
+        </div>
+        
+    <section class="weather-section">
+        <h2>Current Weather in São Paulo</h2>
+        <div class="weather-cards">
+            <div class="weather-card" id="current-weather">
+                <!-- JS will inject current weather here -->
+            </div>
+            <div class="weather-card" id="forecast-weather">
+                <!-- JS will inject forecast here -->
+            </div>
+        </div>
+    </section>
+
+
+
+    </section>
+        <section class="spotlight-section">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-cards" class="spotlight-cards">
+        <!-- JavaScript will inject cards here -->
+        </div>
+    </section>
+
 
     <section class="cta-card">
         <h2> Join the São Paulo Chamber of Commerce!</h2>
         <p>Connect with local businesses, strengthen your network, and boost your community.</p>
         <a href="join.html" class="cta-button">Become a Member Now!</a>
     </section>
-
-
-
-    
-
     </main>
 
     <footer>
@@ -84,6 +114,9 @@
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
 
+
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
     <script src="scripts/data.js"></script>
 </body>
 
