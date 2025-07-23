@@ -1,17 +1,14 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    // Fetch the member data from the JSON file
-    const response = await fetch('data/members.json');
-    const members = await response.json();
-    
+const response = await fetch('data/members.json');
+const members = await response.json();
 
-    // Function to render member cards
+    // FUNCTION TO RENDER MEMBER CARDS
     function renderMembers(members) {
         const membersContainer = document.getElementById('members');
-        membersContainer.innerHTML = ''; 
+        membersContainer.innerHTML = '';
 
         members.forEach(member => {
             const memberSection = document.createElement('section');
-            memberSection.classList.add('member-card'); 
+            memberSection.classList.add('member-card');
 
             memberSection.innerHTML = `
                 <img src="images/${member.image}" alt="${member.name}">
@@ -23,10 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Initially render members in grid view
-    renderMembers(members);
+    renderMembers(members); // INITIAL RENDER
 
-    // Toggle between grid and list view
+    // TOGGLE VIEW BUTTONS
     const gridViewButton = document.getElementById('grid');
     const listViewButton = document.getElementById('list');
     const membersContainer = document.getElementById('members');
@@ -40,16 +36,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         membersContainer.classList.add('list');
         membersContainer.classList.remove('grid');
     });
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.getElementById('menu');
-    const navMenu = document.getElementById('navMenu');
-
-    // Quando o botão do menu for clicado, alternamos a visibilidade do menu
-    menuButton.addEventListener('click', () => {
-        navMenu.classList.toggle('open'); // Alterna a classe 'open'
-    });
-});
-
-});

@@ -12,7 +12,7 @@
 /* General Styles */
 body {
     font-family: var(--font-family);
-    color: #333;
+    color: var(--accent3-color);
     background-color: var(--background-color);
 }
 
@@ -44,13 +44,53 @@ header nav {
     justify-content: flex-end;
     gap: 20px;
 }
+/* Navigation default - mobile first */
+#navMenu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    position: absolute;
+    color: #1A1A1A;
+    top: 80px;
+    /* Ajuste conforme seu header */
+    right: 20px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
 
+/* Show menu when toggled */
+#navMenu.open {
+    display: flex;
+    color: var(--primary-color);
+}
+
+/* Menu button visible on mobile */
 #menu {
-    font-size: 2rem;
+    display: block;
     background: none;
     border: none;
-    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    color: rgb(66, 10, 10);
     cursor: pointer;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+    #navMenu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        gap: 1rem;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #menu {
+        display: none;
+    }
 }
 
 nav a {
@@ -186,19 +226,7 @@ section h4 {
     align-items: center;
 }
 
-#navMenu {
-    display: flex;
-    gap: 20px;
-}
 
-#navMenu a {
-    color: white;
-    text-decoration: none;
-}
-
-#menu {
-    display: none;
-}
 
 /* Spotlight Section */
 .spotlight-section {
@@ -310,16 +338,7 @@ img {
 
 /* Responsive Navigation & Hero Section */
 @media (max-width: 767px) {
-    #navMenu {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #menu {
-        display: block;
-    }
-
+   
     .hero {
         background-image: url('../images/nofocus-mobile.jpg');
         background-position: center;
@@ -406,4 +425,22 @@ img {
 .cta-button:hover {
     background-color: var(--primary-color);
     transform: scale(1.05);
+}
+#members.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#members.list section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#members.list img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
 }
