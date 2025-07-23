@@ -61,6 +61,9 @@ nav a.active {
     text-decoration: underline;
 }
 
+
+/*HERO*/
+
 .hero {
     display: flex;
     justify-content: center;
@@ -96,8 +99,7 @@ nav a.active {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    font-family: 'Family Merriweather',
-        sans-serif;
+    font-family: 'Family Merriweather',sans-serif;
     padding: 1rem;
 }
 
@@ -122,6 +124,7 @@ nav a.active {
 
 .join-button:hover {
     background-color: var(--secondary-color);
+    justify-content: center;
 }
 
 .info-row {
@@ -131,12 +134,13 @@ nav a.active {
     gap: 20px;
 }
 
+
+/*UPCOMING EVENTS*/
 .card {
-    background-color: #fff;
+    background-color:#fff;
     padding: 20px;
     border-radius: 5px;
     width: 30%;
-    /* All cards have the same width */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -205,13 +209,14 @@ section {
 
 #menu {
     display: none;
-    /* O botão será escondido em telas maiores */
     font-size: 2rem;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
 }
+
+/*spotlight*/
 
 .spotlight-section {
     padding: 2rem;
