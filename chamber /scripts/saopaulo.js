@@ -40,13 +40,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         membersContainer.classList.remove('grid');
     });
 
-    // Set the current year and last modified date in the footer
-    const currentYear = new Date().getFullYear();
-    document.getElementById('year').textContent = currentYear;
-
-    const lastModified = new Date(document.lastModified);
-    document.getElementById('lastModified').textContent = lastModified.toLocaleString();
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById('menu');
@@ -56,4 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     menuButton.addEventListener('click', () => {
         navMenu.classList.toggle('open'); // Alterna a classe 'open'
     });
+});
+
 });

@@ -69,12 +69,59 @@ nav a.active {
 }
 
 .hero-content {
-    color: var(--secondary-color);
+    color: var(--text-color);
     max-width: 70%;
 }
 
-.hero h2 {
-    font-size: 40px;
+.hero {
+    background-image: url('../images/nofocus.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 5%;
+    color: black;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.6);
+    /* opcional para legibilidade */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Family Merriweather',
+        sans-serif;
+        padding: 1rem;
+}
+
+.subtext {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    padding: 1rem;
+   font-family: 'Family Merriweather', sans-serif;
+}
+
+.join-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: var(--secondary-color);
 }
 
 .info-row {
@@ -96,8 +143,8 @@ nav a.active {
 .card h3 {
     font-size: 22px;
     margin-bottom: 15px;
-}
 
+}
 
 
 footer {
@@ -126,6 +173,14 @@ section {
 
     h3 {
         font-size: 1.5rem;
+       
+    }
+    h4 {
+        color: #fff;
+            font-size: 10px;
+            text-align:end;
+            flex-grow: 1;
+            padding: 1rem;
     }
 }
 .grid {
@@ -134,9 +189,7 @@ section {
     grid-gap: 5px;
     align-items: center;
 }
-/* Adicionando estilos para o menu responsivo */
 
-/* Inicialmente, esconda o menu para telas menores */
 #navMenu {
     display: flex;
     gap: 20px;
@@ -157,25 +210,6 @@ section {
     cursor: pointer;
 }
 
-/* Para telas menores (mobile), ocultamos os links e mostramos o menu button */
-@media (max-width: 767px) {
-    #navMenu {
-        display: none;
-        /* Esconde o menu de navegação */
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #menu {
-        display: block;
-        /* Mostra o menu button */
-    }
-
-    #navMenu.open {
-        display: flex;
-        /* Quando a classe "open" for adicionada, mostramos o menu */
-    }
-}
 
 .cta-card {
     background: linear-gradient(135deg, var(--accent4-color), var(--primary-color));
@@ -194,16 +228,6 @@ section {
 .cta-card:hover {
     transform: rotate(0deg) scale(1.02);
 }
-.cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--secondary-color);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s;
-}
 
 .cta-card h2 {
     font-size: 2.2rem;
@@ -213,4 +237,24 @@ section {
 .cta-card p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
+
+.cta-button {
+    background-color: var(--accent3-color);
+    color: var(--secondary-color);
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
