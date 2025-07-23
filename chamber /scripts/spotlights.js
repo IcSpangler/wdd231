@@ -1,6 +1,7 @@
 async function getMemberData() {
     const response = await fetch('data/members.json');
     const data = await response.json();
+    console.log(data); // Add this in getMemberData()
     displaySpotlights(data);
 }
 
@@ -35,3 +36,4 @@ function displaySpotlights(members) {
 }
 
 getMemberData();
+

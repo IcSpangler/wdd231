@@ -17,6 +17,8 @@
     <meta property="og:url" content="https://IcSpangler.github.io/wdd231/chamber/directory.html" />
     <meta property="og:type" content="website" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -52,8 +54,7 @@
     </header>
 
     <main>
-        <section class="hero">
-            <section class="hero">
+         <section class="hero">
                 <img src="images/sp.jpg" alt="Hero image Sp">
                 <div class="hero-content-1">
                     <h1>Welcome to São Paulo<br>Chamber of Commerce</h1>
@@ -64,33 +65,29 @@
                 </div>
             </section>
 
-        </section>
     <section class="info-row">
-        <div class="card">
-            <h3>Upcoming Events</h3>
+        <div class="card event-card">
+            <h2><i class="fa-solid fa-calendar-days"></i> Upcoming Events</h2>
             <div class="event">
-                <h4>Business Networking Event</h4>
+                <h4>Business Networking</h4>
                 <p>Join local business owners for a networking session.</p>
             </div>
             <div class="event">
-                <h4>Annual Keynote Speech</h4>
+                <h4>Annual Keynote</h4>
                 <p>Listen to inspiring talks from community leaders.</p>
             </div>
         </div>
-<section class="weather-section">
-    <h2>Current Weather in São Paulo</h2>
-    <div class="weather-cards">
-        <div class="weather-card" id="current-weather">
-            <!-- JS will inject current weather here -->
-        </div>
-        <div class="weather-card" id="forecast-weather">
-            <!-- JS will inject forecast here -->
-        </div>
-    </div>
-</section>
+    
 
-
+        <div class="card weather-card">
+            <h2><i class="fa-solid fa-cloud-sun"></i> Weather in São Paulo</h2>
+            <div class="weather-box">
+                <div class="weather-now" id="current-weather"></div>
+                <div class="forecast" id="forecast-weather"></div>
+            </div>
+        </div>
     </section>
+
         <section class="spotlight-section">
             <h2>Member Spotlights</h2>
             <div id="spotlight-cards" class="spotlight-cards">

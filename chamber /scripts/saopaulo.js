@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Fetch the member data from the JSON file
     const response = await fetch('data/members.json');
     const members = await response.json();
+    
 
     // Function to render member cards
     function renderMembers(members) {
         const membersContainer = document.getElementById('members');
-        membersContainer.innerHTML = ''; // Clear any existing content
+        membersContainer.innerHTML = ''; 
 
         members.forEach(member => {
             const memberSection = document.createElement('section');
-            memberSection.classList.add('member-card'); // Add a class for styling
+            memberSection.classList.add('member-card'); 
 
             memberSection.innerHTML = `
                 <img src="images/${member.image}" alt="${member.name}">
