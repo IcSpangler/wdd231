@@ -5,11 +5,11 @@
     --background-color: #F9F9F9;
     --text-color: #1A1A1A;
     --accent-color: #406882;
-    --font-family:'Family Merriweather', sans-serif;
+    --font-family: 'Merriweather', sans-serif;
     --accent3-color: #f1f1f1;
 }
 
-
+/* General Styles */
 body {
     font-family: var(--font-family);
     color: #333;
@@ -31,12 +31,11 @@ header img {
 }
 
 header h1 {
-    color: #fff;
+    color: #ffffff;
     font-size: 24px;
     text-align: left;
     flex-grow: 1;
     padding: 1rem;
-    
 }
 
 header nav {
@@ -50,7 +49,7 @@ header nav {
     font-size: 2rem;
     background: none;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -62,24 +61,9 @@ nav a {
 
 nav a.active {
     text-decoration: underline;
-    
 }
 
-
-/*HERO*/
-
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-.hero-content-1 {
-    color: var(--text-color);
-    max-width: 100%;
-}
-
+/* Hero Section */
 .hero {
     background-image: url('../images/nofocus.jpg');
     background-size: cover;
@@ -94,7 +78,6 @@ nav a.active {
 
 .hero-content {
     background-color: rgba(255, 255, 255, 0.6);
-    /* opcional para legibilidade */
     padding: 10px;
     border-radius: 10px;
 }
@@ -112,7 +95,7 @@ nav a.active {
     margin-bottom: 1rem;
     color: white;
     padding: 1rem;
-    font-family: 'Family Merriweather', sans-serif;
+    font-family: var(--font-family);
 }
 
 .join-button {
@@ -124,13 +107,16 @@ nav a.active {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    
 }
 
 .join-button:hover {
     background-color: var(--secondary-color);
     justify-content: center;
+    
 }
 
+/* Info Row */
 .info-row {
     display: flex;
     justify-content: space-between;
@@ -138,25 +124,22 @@ nav a.active {
     gap: 20px;
 }
 
-
-/*UPCOMING EVENTS*/
+/* Cards */
 .card {
-    background-color:#fff;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     width: 30%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    
 }
 
 .card h3 {
     font-size: 22px;
     margin-bottom: 15px;
     font-family: var(--font-family);
-
 }
 
-
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: #fff;
@@ -176,25 +159,24 @@ footer {
 section {
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 0.5rem;
+}
 
-    a {
-        font-family: Arial, sans-serif;
-        font-size: 0.85rem;
-        color: navy;
-    }
+section a {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: navy;
+}
 
-    h3 {
-        font-size: 1.5rem;
+section h3 {
+    font-size: 1.5rem;
+}
 
-    }
-
-    h4 {
-        color: #fff;
-        font-size: 10px;
-        text-align: end;
-        flex-grow: 1;
-        padding: 1rem;
-    }
+section h4 {
+    color: #fff;
+    font-size: 10px;
+    text-align: end;
+    flex-grow: 1;
+    padding: 1rem;
 }
 
 .grid {
@@ -216,15 +198,9 @@ section {
 
 #menu {
     display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
 }
 
-/*spotlight*/
-
+/* Spotlight Section */
 .spotlight-section {
     padding: 2rem;
     background-color: var(--accent3-color);
@@ -242,6 +218,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     justify-items: center;
+    padding: 1rem;
 }
 
 .spotlight-card {
@@ -273,7 +250,7 @@ section {
     display: inline-block;
     padding: 0.5rem 1rem;
     background-color: var(--secondary-color);
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -283,8 +260,8 @@ section {
     background-color: var(--primary-color);
 }
 
-.weather-section,
-.spotlight-section {
+/* Weather Section */
+.weather-section {
     padding: 2rem;
     background-color: var(--accent3-color);
     border-radius: 12px;
@@ -294,146 +271,6 @@ section {
 #forecast-list {
     list-style: none;
     padding: 0;
-}
-
-.spotlight-card {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 300px;
-}
-
-.spotlight-card img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-/* Para telas menores (mobile), ocultamos os links e mostramos o menu button */
-@media (max-width: 767px) {
-    #navMenu {
-        display: none;
-        /* Esconde o menu de navegação */
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #menu {
-        display: block;
-        /* Mostra o menu button */
-    }
-
-    @media (max-width: 767px) {
-        .hero {
-            background-image: url('../images/nofocus-mobile.jpg');
-            /* opcional: use uma imagem menor e mais leve */
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
-            padding-left: 2%;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 90%;
-            padding: 1rem;
-            background-color: rgba(255, 255, 255, 0.75);
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-            padding: 0.5rem;
-        }
-
-        .subtext {
-            font-size: 1rem;
-            padding: 0.5rem;
-            color: black;
-            /* opcional: melhora a leitura sobre fundo claro */
-        }
-
-        .join-button {
-            font-size: 0.9rem;
-            padding: 0.6rem 1.2rem;
-        }
-    }
-
-    #navMenu.open {
-        display: flex;
-        /* Quando a classe "open" for adicionada, mostramos o menu */
-    }
-}
-
-.cta-card {
-    background: linear-gradient(135deg, var(--accent4-color), var(--primary-color));
-    color: var(--primary-color);
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 600px;
-    border-radius: 1.5rem;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transform: rotate(-1deg);
-    transition: transform 0.3s ease;
-}
-
-.cta-card:hover {
-    transform: rotate(0deg) scale(1.02);
-}
-
-.cta-card h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-}
-
-.cta-card p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-.cta-button {
-    background-color: var(--accent3-color);
-    color: var(--secondary-color);
-    padding: 0.8rem 1.8rem;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 2rem;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.cta-button:hover {
-    background-color: var(--primary-color);
-    transform: scale(1.05);
-}
-
-.spotlight-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
-.spotlight-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.spotlight-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-    border-radius: 5px;
 }
 
 .weather-cards {
@@ -456,17 +293,117 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Image Defaults */
 img {
     width: 100%;
     height: 200px;
-    /* ou o tamanho desejado */
     object-fit: cover;
     border-radius: 8px;
-    /* opcional: bordas arredondadas */
 }
+
 .spotlight-card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+/* Responsive Navigation & Hero Section */
+@media (max-width: 767px) {
+    #navMenu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .hero {
+        background-image: url('../images/nofocus-mobile.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        padding-left: 2%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .subtext {
+        font-size: 1rem;
+        padding: 0.5rem;
+        color: black;
+    }
+
+    .join-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    #navMenu.open {
+        display: flex;
+    }
+}
+
+/* CTA Card */
+.cta-card {
+    background: linear-gradient(135deg, var(--accent3-color), var(--primary-color));
+    color: var(--primary-color);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease;
+}
+
+.cta-card:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.cta-card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.cta-card p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+
+}
+
+.cta-button {
+    background-color: var(--accent3-color);
+    color: var(--secondary-color);
+    color:var(--text-color);
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
 }
