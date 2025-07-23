@@ -64,6 +64,11 @@ header nav {
     text-decoration: none;
     font-weight: bold;
 }
+#navMenu a:hover {
+    color: var(--secondary-color);
+    /* ou a cor que preferir */
+    text-decoration: underline;
+}
 /* Show menu when toggled */
 #navMenu.open {
     display: flex;
