@@ -58,8 +58,12 @@ header nav {
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 999;
+}#navMenu a {
+    color: black;
+    /* ou outra cor visível */
+    text-decoration: none;
+    font-weight: bold;
 }
-
 /* Show menu when toggled */
 #navMenu.open {
     display: flex;
@@ -72,7 +76,7 @@ header nav {
     background: none;
     border: none;
     font-size: 2rem;
-    color: rgb(66, 10, 10);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -89,7 +93,8 @@ header nav {
     }
 
     #menu {
-        display: none;
+        display:block;
+        color: #000;
     }
 }
 
