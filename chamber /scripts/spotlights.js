@@ -22,12 +22,12 @@ function displaySpotlights(members) {
         card.classList.add('spotlight-card');
 
         card.innerHTML = `
-            <img src="${member.image || 'images/default-logo.jpg'}" alt="${member.name} logo" loading="lazy">
+            <img src="images/${member.image}" alt="${member.name} logo">
             <h3>${member.name}</h3>
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>Address:</strong> ${member.address}</p>
-            <p><strong>Membership:</strong> ${member.membershipLevel === 3 ? 'Gold' : 'Silver'}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
+            <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+            <p><em>${member.membershipLevel === 3 ? 'Gold Member' : 'Silver Member'}</em></p>
         `;
 
         container.appendChild(card);
