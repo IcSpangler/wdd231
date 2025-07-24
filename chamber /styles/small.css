@@ -51,7 +51,7 @@ header nav {
     gap: 10px;
     background-color: white;
     position: absolute;
-    color: #000000;
+    color: #fffefe;
     top: 80px;
     /* Ajuste conforme seu header */
     right: 20px;
@@ -98,11 +98,11 @@ header nav {
 
     #menu {
         display:block;
-        color: #000000;
+        color: #fff3f3;
     }
 }
 #navMenu a {
-    color: black;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
 }
