@@ -1,7 +1,7 @@
-const response = await fetch('data/members.json');
-const members = await response.json();
+document.addEventListener("DOMContentLoaded", async () => {
+    const response = await fetch('data/members.json');
+    const members = await response.json();
 
-    // FUNCTION TO RENDER MEMBER CARDS
     function renderMembers(members) {
         const membersContainer = document.getElementById('members');
         membersContainer.innerHTML = '';
@@ -20,9 +20,8 @@ const members = await response.json();
         });
     }
 
-    renderMembers(members); // INITIAL RENDER
+    renderMembers(members);
 
-    // TOGGLE VIEW BUTTONS
     const gridViewButton = document.getElementById('grid');
     const listViewButton = document.getElementById('list');
     const membersContainer = document.getElementById('members');
@@ -36,3 +35,4 @@ const members = await response.json();
         membersContainer.classList.add('list');
         membersContainer.classList.remove('grid');
     });
+});
