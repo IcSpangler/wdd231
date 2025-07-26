@@ -1,54 +1,64 @@
-const perksDiv = document.getElementById('perks');
+document.addEventListener('DOMContentLoaded', () => {
+    // Funções para abrir e fechar modais
+    function openModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) modal.style.display = 'block';
+    }
 
-document.querySelectorAll('input[name="level"]').forEach(radio => {
-    radio.addEventListener('change', (e) => {
-        let perks = '';
-        switch (e.target.value) {
-            case '1':
-                perks = '<ul><li>Directory listing</li><li>Newsletter access</li></ul>';
-                break;
-            case '2':
-                perks = '<ul><li>All non‑profit perks</li><li>Social media promotion</li></ul>';
-                break;
-            case '3':
-                perks = '<ul><li>All silver perks</li><li>Event sponsorship</li><li>Featured ads</li></ul>';
-                break;
-            default:
-                perks = '';
-        }
-        perksDiv.innerHTML = perks;
+    function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) modal.style.display = 'none';
+    }
+
+    // Fecha modal ao clicar fora do conteúdo
+    window.addEventListener('click', (event) => {
+        document.querySelectorAll('.modal').forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
     });
-});
 
-function openModal(id) {
-    document.getElementById(id).style.display = 'block';
-}
-
-function closeModal(id) {
-    document.getElementById(id).style.display = 'none';
-}
-
-// Optional: Close modal when clicking outside
-window.addEventListener('click', function (event) {
-    document.querySelectorAll('.modal').forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
+    // Fecha modal ao clicar no botão fechar (x)
+    document.querySelectorAll('.modal .close').forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            if (modal) modal.style.display = 'none';
+        });
     });
-});
 
+    // Mapeia nome do membership para id do modal
+    const idMap = {
+        'NP Membership': 'np-modal',
+        'Bronze Membership': 'bronze-modal',
+        'Silver Membership': 'silver-modal',
+        'Gold Membership': 'gold-modal'
+    };
 
-const form = document.getElementById('membershipForm');
-const thankYouMsg = document.getElementById('thankyou-message');
+    // Adiciona evento de clique nos cards para abrir modal correto
+    document.querySelectorAll('.membership-section .card').forEach(card => {
+        card.addEventListener('click', () => {
+            const membershipName = card.querySelector('h3').textContent.trim();
+            const modalId = idMap[membershipName];
+            if (modalId) openModal(modalId);
+        });
+    });
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault(); // evita o envio tradicional
+    // Controle do formulário
+    const form = document.getElementById('membershipForm');
+    if (form) {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // bloqueia envio tradicional
+            // Você pode adicionar aqui validações adicionais se quiser
 
-    // Aqui você pode validar/usar os dados, enviar via fetch/AJAX, salvar localStorage etc.
+            // Aqui só redireciona para a página de agradecimento
+            window.location.href = "thankyou.html";
+        });
+    }
 
-    // Oculta o formulário
-    form.style.display = 'none';
-
-    // Mostra a mensagem de obrigado
-    thankYouMsg.style.display = 'block';
+    // Atualiza timestamp oculto
+    const timestampInput = document.getElementById('timestamp');
+    if (timestampInput) {
+        timestampInput.value = new Date().toISOString();
+    }
 });

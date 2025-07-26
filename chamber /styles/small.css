@@ -14,6 +14,7 @@ body {
     font-family: var(--font-family);
     color: var(--text-color);
     background-color: var(--background-color);
+    background-color: #f3f8fb;
 }
 
 header {
@@ -527,4 +528,257 @@ a:focus,
 button:focus {
     outline: 2px dashed var(--secondary-color);
     outline-offset: 3px;
+}
+main.thankyou-container {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+ul {
+    padding-left: 1.2rem;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #406882;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #1A374D;
+}
+.form-container {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--background-color, #f9f9f9);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h1 {
+    color: var(--primary-color, #1A374D);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-container form {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.form-container label {
+    font-weight: bold;
+    color: var(--text-color, #1A1A1A);
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-container button {
+    background-color: var(--primary-color, #1A374D);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: var(--accent-color, #406882);
+}
+
+#thankyou-message {
+    text-align: center;
+    padding-top: 2rem;
+}
+/*xmembership*/
+.membership-card {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.membership-instructions {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.membership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.membership-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    max-width: 250px;
+}
+
+.membership-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.membership-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.membership-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0;
+}
+@keyframes fadeScaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Pulsos com cores diferentes para cada membership */
+@keyframes pulseNP {
+
+    0%,
+    100% {
+        background-color: #d1e7dd;
+        /* verde claro */
+    }
+
+    50% {
+        background-color: #a3cfbb;
+        /* verde mais forte */
+    }
+}
+
+@keyframes pulseBronze {
+
+    0%,
+    100% {
+        background-color: #fbe5d6;
+        /* bronze claro */
+    }
+
+    50% {
+        background-color: #f4b183;
+        /* bronze mais forte */
+    }
+}
+
+@keyframes pulseSilver {
+
+    0%,
+    100% {
+        background-color: #e0e0e0;
+        /* prata claro */
+    }
+
+    50% {
+        background-color: #bdbdbd;
+        /* prata mais forte */
+    }
+}
+
+@keyframes pulseGold {
+
+    0%,
+    100% {
+        background-color: #fff3cd;
+        /* dourado claro */
+    }
+
+    50% {
+        background-color: #ffe08a;
+        /* dourado mais forte */
+    }
+}
+
+/* Estilo base para todos os cards */
+.membership-section .card {
+    opacity: 0;
+    animation: fadeScaleIn 0.8s ease forwards;
+    cursor: pointer;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    /* background inicial será definido pela animação */
+}
+
+/* Agora o fade+scale entra com delays diferentes e animações pulse de cor distintas */
+
+.membership-section .card:nth-child(1) {
+    animation-delay: 0s;
+    animation-name: fadeScaleIn, pulseNP;
+    animation-duration: 0.8s, 3s;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, forwards;
+}
+
+.membership-section .card:nth-child(2) {
+    animation-delay: 0.3s;
+    animation-name: fadeScaleIn, pulseBronze;
+    animation-duration: 0.8s, 3s;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, forwards;
+}
+
+.membership-section .card:nth-child(3) {
+    animation-delay: 0.6s;
+    animation-name: fadeScaleIn, pulseSilver;
+    animation-duration: 0.8s, 3s;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, forwards;
+}
+
+.membership-section .card:nth-child(4) {
+    animation-delay: 0.9s;
+    animation-name: fadeScaleIn, pulseGold;
+    animation-duration: 0.8s, 3s;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, forwards;
 }

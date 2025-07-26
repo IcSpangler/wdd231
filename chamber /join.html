@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>São Paulo Chamber of Commerce</title>
+    <meta name="description"
+        content="Welcome to the São Paulo Chamber of Commerce. Get news, weather, events, and featured businesses." />
+    <meta name="author" content="Isabelle C Spangler" />
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="São Paulo Chamber of Commerce" />
+    <meta property="og:description"
+        content="Directory page for local businesses in São Paulo. Discover businesses and events in your community." />
+    <meta property="og:image" content="images/sp-chamber-logo.jpg" />
+    <meta property="og:url" content="https://IcSpangler.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- FONT -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </noscript>
+    <link rel="stylesheet" href="styles/small.css" />
+</head>
+
+<body>
+    <header>
+        <img src="images/sp.webp" alt="SP Logo" width="150" height="100" />
+        <h1>São Paulo Chamber of Commerce</h1>
+
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="dircty.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+           
+        </nav>
+         <button id="menu" aria-label="Menu Button">☰</button>
+    </header>
+
+    <main class="form-container">
+        <h1>Join the Chamber</h1>
+        <p>Fill out the form below to become a member of our Chamber of Commerce.</p>
+
+        <form id="membershipForm" method="get" action="thankyou.html">
+            <label for="fname">First Name:</label><br />
+            <input type="text" id="fname" name="fname" required title="Enter your first name"
+                autocomplete="given-name" /><br />
+
+            <label for="lname">Last Name:</label><br />
+            <input type="text" id="lname" name="lname" required title="Enter your last name"
+                autocomplete="family-name" /><br />
+
+            <label for="position">Title/Position:</label><br />
+            <input type="text" id="position" name="position" pattern="[a-zA-Z\s\-\.]{7,}" required
+                placeholder="at least 7 characters" /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required autocomplete="email" /><br />
+
+            <label for="phone">Phone:</label><br />
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" /><br />
+
+            <label for="business">Business/Organization Name:</label><br />
+            <input type="text" id="business" name="business" required /><br />
+
+            <label for="level">Membership Level:</label><br />
+            <select id="level" name="level" required title="Select a membership level">
+                <option value="">Select level</option>
+                <option value="np">NP Membership</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select><br />
+
+            <label for="description">Business/Organization Description:</label><br />
+            <textarea id="description" name="description" rows="4"></textarea><br />
+
+            <input type="hidden" name="timestamp" id="timestamp" />
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <section id="thankyou-message" style="display:none; text-align:center; margin-top: 2rem;">
+            <div class="thankyou-card"
+                style="background:#fff; padding:2rem; border-radius:10px; max-width:400px; margin:auto; box-shadow:0 0 15px rgba(0,0,0,0.1);">
+                <div class="icon" style="font-size:3rem; color:green;">✔️</div>
+                <h2>Thank You!</h2>
+                <p>Your membership application has been submitted successfully.</p>
+                <p>We’ll be in touch soon with more information.</p>
+                <a href="index.html" class="home-button"
+                    style="display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background:#406882; color:#fff; border-radius:8px; text-decoration:none;">Return
+                    to Home</a>
+            </div>
+        </section>
+
+        <h2>Membership Levels</h2>
+        <p style="text-align:center; font-style: italic; margin-bottom: 1rem;">
+            Click on each membership level card below to learn more.
+        </p>
+        <div class="membership-section" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+            <div class="card" onclick="openModal('np-modal')"
+                style="cursor:pointer; padding:1rem; border:1px solid #ccc; border-radius:8px; width:150px; text-align:center;">
+                <h3>NP Membership</h3>
+                <p>For non-profit organizations</p>
+            </div>
+
+            <div class="card" onclick="openModal('bronze-modal')"
+                style="cursor:pointer; padding:1rem; border:1px solid #ccc; border-radius:8px; width:150px; text-align:center;">
+                <h3>Bronze Membership</h3>
+                <p>Basic membership with website listing</p>
+            </div>
+
+            <div class="card" onclick="openModal('silver-modal')"
+                style="cursor:pointer; padding:1rem; border:1px solid #ccc; border-radius:8px; width:150px; text-align:center;">
+                <h3>Silver Membership</h3>
+                <p>Includes social media promotion</p>
+            </div>
+
+            <div class="card" onclick="openModal('gold-modal')"
+                style="cursor:pointer; padding:1rem; border:1px solid #ccc; border-radius:8px; width:150px; text-align:center;">
+                <h3>Gold Membership</h3>
+                <p>Top-tier benefits and homepage feature</p>
+            </div>
+        </div>
+
+        <!-- NP Modal -->
+        <div id="np-modal" class="modal" style="display:none;">
+            <div class="modal-content"
+                style="background:#fff; padding:1rem; border-radius:10px; max-width:400px; margin:auto; box-shadow:0 0 15px rgba(0,0,0,0.2); position:relative;">
+                <span class="close" onclick="closeModal('np-modal')"
+                    style="cursor:pointer; position:absolute; top:10px; right:15px; font-size:1.5rem;">&times;</span>
+                <h4>NP Benefits</h4>
+                <ul>
+                    <li>Free membership</li>
+                    <li>Directory listing</li>
+                    <li>Networking events</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bronze Modal -->
+        <div id="bronze-modal" class="modal" style="display:none;">
+            <div class="modal-content"
+                style="background:#fff; padding:1rem; border-radius:10px; max-width:400px; margin:auto; box-shadow:0 0 15px rgba(0,0,0,0.2); position:relative;">
+                <span class="close" onclick="closeModal('bronze-modal')"
+                    style="cursor:pointer; position:absolute; top:10px; right:15px; font-size:1.5rem;">&times;</span>
+                <h4>Bronze Benefits</h4>
+                <ul>
+                    <li>Directory listing</li>
+                    <li>Event access</li>
+                    <li>Monthly newsletter</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Silver Modal -->
+        <div id="silver-modal" class="modal" style="display:none;">
+            <div class="modal-content"
+                style="background:#fff; padding:1rem; border-radius:10px; max-width:400px; margin:auto; box-shadow:0 0 15px rgba(0,0,0,0.2); position:relative;">
+                <span class="close" onclick="closeModal('silver-modal')"
+                    style="cursor:pointer; position:absolute; top:10px; right:15px; font-size:1.5rem;">&times;</span>
+                <h4>Silver Benefits</h4>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Social media promotion</li>
+                    <li>Newsletter feature</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gold Modal -->
+        <div id="gold-modal" class="modal" style="display:none;">
+            <div class="modal-content"
+                style="background:#fff; padding:1rem; border-radius:10px; max-width:400px; margin:auto; box-shadow:0 0 15px rgba(0,0,0,0.2); position:relative;">
+                <span class="close" onclick="closeModal('gold-modal')"
+                    style="cursor:pointer; position:absolute; top:10px; right:15px; font-size:1.5rem;">&times;</span>
+                <h4>Gold Benefits</h4>
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>Homepage spotlight</li>
+                    <li>Priority sponsorships</li>
+                </ul>
+            </div>
+        </div>
+<script>
+    // Abre modal pelo id
+    function openModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+            modal.style.display = "block";
+        }
+    }
+
+    // Fecha modal pelo id
+    function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Fecha modais ao clicar na área externa
+    window.addEventListener('click', (event) => {
+        document.querySelectorAll('.modal').forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // Fecha modal ao clicar no "x" com classe .close
+    document.querySelectorAll('.modal .close').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const modal = e.target.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+    </main>
+<footer>
+    <p>&copy; <span id="year"></span> SP Chamber of Commerce</p>
+    <p>Isabelle C Spangler | WDD 231</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+</footer>
+
+
+<script src="scripts/weather.js"></script>
+<script src="scripts/spotlights.js"></script>
+<script src="scripts/data.js"></script>
+<script src="scripts/menu.js"></script>
+
+   
+
+</body>
+
+</html>
