@@ -1,0 +1,57 @@
+:root {
+      --primary-color: #C94277;
+      /* Pinkish Red - main brand color */
+      --secondary-color: #2F0A28;
+      /* Deep Purple - accents and headings */
+      --background-color: #FFF;
+      /* White - background */
+      --text-color: #000;
+      /* Black - text */
+  }
+
+  body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+      color: var(--primary-color);
+  }
+
+  strong {
+      color: var(--secondary-color);
+  }
+
+  header {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  section {
+      margin-bottom: 30px;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+  }
+
+  /* Wireframe images layout */
+  .wireframes {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+  }
+
+  .wireframes figure {
+      flex: 1 1 300px;
+      text-align: center;
+  }
+
