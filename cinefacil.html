@@ -1,76 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="WDD 231 Project" />
-    <meta name="author" content="Isabelle Cavalcante Spangler" />
-    <title>Cine Facil </title>
-    <link href="styles/project.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WDD 231 – CineFácil - Movie Recommendations Made Easy" />
+    <meta name="author" content="Isabelle C Spangler" />
+    <title>CineFácil – Movie Recommendations Made Easy</title>
+
+    <link rel="stylesheet" href="styles/project.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="scripts/websjs" defer></script>
 </head>
 
-
 <body>
-
     <header>
-        <h1>Site Plan: CineFácil – Movie Recommendations Made Easy</h1>
+        <h1>CineFácil</h1>
+        <img src="images/logo.png" alt="CineFácil Logo" class="logo" width="100" height="100" />
+        <nav>
+            <ul>
+                <li><a href="cinefacil.html">Home</a></li>
+                <li><a href="genres.html">Genres Gallery</a></li>
+                <li><a href="suggest.html">Suggestion Page</a></li>
+            </ul>
+        </nav>
     </header>
+    <main>
+        <section class="hero">
+            <img src="images/cinema.jpg" alt="Popular Movies Collage" />
+        </section>
 
-    <section>
-        <h2>Site Name</h2>
-        <p><strong>CineFácil</strong> — The name combines “Cine” (cinema) and “Fácil” (easy), representing the site’s
-            goal of making movie discovery quick and simple for everyone.
-            Optional domain availability: <em>cinefacil.com</em></p>
-    </section>
+    
+        <section class="card">
+            <h2>Site Purpose</h2>
+            <p>CineFácil helps users discover great movies based on their mood or favorite genres. Whether you want to
+                laugh, cry, or feel the suspense, CineFácil makes finding the perfect movie simple and fun.</p>
+            <p>From quick picks for popular films to curated genre collections, our site is designed to help you spend
+                less time searching and more time watching.</p>
+        </section>
 
-    <section>
-        <h2>Site Purpose</h2>
-        <p>CineFácil will help users find great movies based on their mood or favorite genres. It will feature curated
-            movie recommendations, genre galleries, and a suggestion form where visitors can share their own movie
-            picks. The goal is to make movie discovery fast, fun, and personalized.</p>
-    </section>
+        <section class="card">
+            <h2>Scenarios</h2>
+            <p>"I’m in the mood for a comedy tonight. What should I watch?"</p>
+            <p>This scenario guides content that helps users quickly find the best comedies available.</p>
 
-    <section>
-        <h2>Scenarios</h2>
-        <ul>
-            <li>“I’m in the mood for a comedy tonight. What should I watch?”</li>
-            <li>“I love suspense movies. Can I see a list of the best ones?”</li>
-            <li>“Can I suggest my favorite movie for others to see?”</li>
-        </ul>
-    </section>
+            <p>"I love suspense movies. Can I see a list of the best ones?"</p>
+            <p>This leads to curated lists of top-rated suspense films for a thrilling movie night.</p>
 
-    <section>
-        <h2>Color Schema</h2>
-        <p>Primary Color: <span style="color: var(--primary-color);">#C94277</span> – Used for headings, buttons, and
-            highlights.</p>
-        <p>Secondary Color: <span style="color: var(--secondary-color);">#2F0A28</span> – Used for navigation, footers,
-            and accents.</p>
-        <p>Background: <span style="color: var(--background-color); background-color: #000;">#FFFFFF</span> – White for
-            clean readability.</p>
-    </section>
+            <p>"Can I suggest my favorite movie for others to see?"</p>
+            <p>Yes! Our suggestion page lets visitors recommend their own favorites for the community to discover.</p>
+        </section>
 
-    <section>
-        <h2>Typography</h2>
-        <p>Main Font: <strong>Poppins</strong> – Used for both headings and body text for a clean, modern look.</p>
-    </section>
-
-    <section>
-        <h2>Wireframe</h2>
-        <p>Below are the planned layouts for mobile and desktop views of the Home Page:</p>
-        <div class="wireframes">
-            <figure>
-                <img src="images/wireframe-mobile.png" alt="Mobile wireframe for CineFácil Home Page">
-                <figcaption>Mobile Layout</figcaption>
-            </figure>
-            <figure>
-                <img src="images/wireframe-desktop.png" alt="Desktop wireframe for CineFácil Home Page">
-                <figcaption>Desktop Layout</figcaption>
-            </figure>
-        </div>
-    </section>
-
+        <section class="signup">
+            <h2>Sign Up for Movie Recommendations!</h2>
+            <form id="signup-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your e-mail" required />
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Isabelle C Spangler | Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/website.js" defer></script>
 </body>
 
 </html>
