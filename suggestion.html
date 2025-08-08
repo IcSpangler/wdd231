@@ -31,9 +31,9 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="cinefacil.html" class="active">Home</a></li>
-                <li><a href="genres.html">Genres Gallery</a></li>
-                <li><a href="suggestion.html">Suggestion Page</a></li>
+                <a href="cinefacil.html" class="active">Home</a>
+                <a href="genres.html">Genres Gallery</a>
+                <a href="suggestion.html">Suggestion Page</a>
             </ul>
             <button id="menu" aria-label="Menu Button">☰</button>
             <script src="scripts/menu.js"></script>
@@ -41,6 +41,12 @@
     </header>
 
     <main>
+        <main>
+            <section id="movies-container">
+                <!-- Movie cards will be dynamically inserted here -->
+            </section>
+        </main>
+
         <section class="card-suggestion">
             <h2>Suggest a Movie</h2>
             <p>Do you have a favorite movie that others should watch? Share it with us, and it might appear in our
@@ -83,7 +89,6 @@
         <p>&copy; <span id="currentyear"></span> | Isabelle C Spangler | Utah</p>
         <p id="lastModified"></p>
     </footer>
-
     <script src="scripts/date.js"></script>
 </body>
 

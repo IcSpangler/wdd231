@@ -57,3 +57,28 @@ if (signupForm) {
         signupForm.reset();
     });
 }
+async function fetchMovies() {
+    try {
+        const response = await fetch('data/movies.json');
+        if (!response.ok) throw new Error('Network error');
+        const movies = await response.json();
+
+        const container = document.querySelector('#movies-container');
+        container.innerHTML = '';
+
+        movies.slice(0, 15).forEach(movie => {
+            container.innerHTML += `
+        <article class="movie-card">
+          <h3>${movie.title}</h3>
+          <p>Genre: ${movie.genre}</p>
+          <p>Year: ${movie.year}</p>
+          <p>Rating: ${movie.rating}</p>
+        </article>
+      `;
+        });
+    } catch (error) {
+        console.error('Fetch failed:', error);
+    }
+}
+
+fetchMovies();
