@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo Chamber of Commerce</title>
+    <meta name="description"
+        content="Welcome to the São Paulo Chamber of Commerce. Get news, weather, events, and featured businesses." />
+    <meta name="author" content="Isabelle C Spangler" />
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="São Paulo Chamber of Commerce" />
+    <meta property="og:description"
+        content="Directory page for local businesses in São Paulo. Discover businesses and events in your community." />
+    <meta property="og:image" content="images/sp-chamber-logo.jpg" />
+    <meta property="og:url" content="https://IcSpangler.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- FONT -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </noscript>
+    <link rel="stylesheet" href="styles/small.css" />
+
+
+</head>
+
+<body>
+    <header>
+        <img src="images/sp.webp" alt="SP Logo" width="150" height="100" />
+        <h1>São Paulo Chamber of Commerce</h1>
+
+        <nav>
+            <nav id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="dircty.html">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+            </nav>
+            <button id="menu" aria-label="Menu Button">☰</button>
+        </nav>
+    </header>
+
+    <main>
+         <section class="hero">
+                <img src="images/sp.jpg" alt="Hero image Sp">
+                <div class="hero-content-1">
+                    <h2>Welcome to São Paulo<br>Chamber of Commerce</h2>
+            
+                    <p class="subtext">Empowering local businesses to grow, connect, and thrive!</p>
+            
+                    <button class="join-button">Join Us Today</button>
+                </div>
+            </section>
+
+    <section class="info-row">
+        <div class="card event-card">
+            <h2> Upcoming Events</h2>
+            <div class="event">
+                <h4>Business Networking</h4>
+                <p>Join local business owners for a networking session.</p>
+            </div>
+            <div class="event">
+                <h4>Annual Keynote</h4>
+                <p>Listen to inspiring talks from community leaders.</p>
+            </div>
+        </div>
+    
+
+        <div class="card weather-card">
+            <h2> Weather in São Paulo</h2>
+            <div class="weather-box">
+                <div class="weather-now" id="current-weather"></div>
+                <div class="forecast" id="forecast-weather"></div>
+            </div>
+        </div>
+    </section>
+
+        <section class="spotlight-section">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-cards" class="spotlight-cards">
+        <!-- JavaScript will inject cards here -->
+        </div>
+    </section>
+
+
+    <section class="cta-card">
+        <h2> Join the São Paulo Chamber of Commerce!</h2>
+        <p>Connect with local businesses, strengthen your network, and boost your community.</p>
+        <a href="join.html" class="cta-button">Become a Member Now!</a>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> SP Chamber of Commerce</p>
+        <p>Isabelle C Spangler | WDD 231</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Tech Innovators",
+        "address": "123 Innovation Rd, Cityville, ST 12345",
+        "phone": "123-456-7890",
+        "website": "https://www.techinnovators.com",
+        "image":"tech.svg",
+        "membershipLevel": 3,
+        "additionalInfo": "Leaders in AI technology."
+    },
+    {
+        "name": "Green Earth Solutions",
+        "address": "456 Green St, Eco City, EC 54321",
+        "phone": "234-567-8901",
+        "website": "https://www.greenearth.com",
+        "image": "green.jpg",
+        "membershipLevel": 2,
+        "additionalInfo": "Sustainable solutions for a better planet."
+    },
+    {
+        "name": "Creative Studios",
+        "address": "789 Creative Blvd, Art Town, AT 67890",
+        "phone": "345-678-9012",
+        "website": "https://www.creativestudios.com",
+        "image": "creative.png",
+        "membershipLevel": 1,
+        "additionalInfo": "Design and branding experts."
+    },
+    {
+        "name": "Paulista Gym",
+        "address": "321 Fit Rd, São Paulo",
+        "phone": "11-6666-2345",
+        "website": "https://www.paulistagym.com",
+        "image": "gym.jpg",
+        "membershipLevel": 3,
+        "additionalInfo": "Health and fitness for all ages."
+    },
+    {
+        "name": "Coffee Corner",
+        "address": "654 Brew Ln, São Paulo",
+        "phone": "11-5555-4321",
+        "website": "https://www.coffeecorner.com",
+        "image": "coffe.jpg",
+        "membershipLevel": 2,
+        "additionalInfo": "Your favorite local coffee spot."
+    },
+    {
+        "name": "São Paulo Bookstore",
+        "address": "987 Book St, São Paulo",
+        "phone": "11-4444-8765",
+        "website": "https://www.spbookstore.com",
+        "image": "book.png",
+        "membershipLevel": 1,
+        "additionalInfo": "Books, gifts, and more."
+    },
+    {
+        "name": "Bright Minds Academy",
+        "address": "135 Education Way, São Paulo",
+        "phone": "11-3333-7890",
+        "website": "https://www.brightminds.com",
+        "image": "minds.png",
+        "membershipLevel": 3,
+        "additionalInfo": "Educational programs for children and adults."
+    }
+]
+

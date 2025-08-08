@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="WDD 231 Course Home Page" />
+    <meta name="author" content="Isabelle Cavalcante Spangler" />
+    <title>WDD 231 | Course Home Page</title>
+
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
+  
+    <link rel="stylesheet" href="styles/small.css" />
+
+    <link href="styles/larger.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link href="styles/larger.css" rel="stylesheet" />
+    </noscript>
+
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courselistarray.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="120" height="100" />
+        <span>WDD 231 | Course Home Page</span>
+        <button id="menu" aria-label="Menu Button">☰</button>
+    </header>
+
+    <nav id="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="/chamber /index.html">Chamber</a>
+        <a href="/cinefacil.html">Final</a>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+    
+        <div class="main-content">
+            <section class="about-section">
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi everyone! I'm Isabelle, a 23-year-old based in the beautiful state of Utah.
+                        I'm passionate about exploring creativity, learning, and growth, and I love working on projects that
+                        challenge me to
+                        think outside the box.
+                        When I’m not coding or exploring new ideas, you can find me planning meaningful moments (I’m
+                        currently
+                        planning my
+                        wedding with my wonderful fiancé, Nathan!) or enjoying the natural beauty that Utah has to offer.
+                        I am also the number one fan of coke zero!
+                    </p>
+                </div>
+                <div class="student-photo">
+                    <h2>Student Photo</h2>
+                    <img src="images/isabelle.jpg" alt="Student Photo" />
+                </div>
+            </section>
+        </div>
+      
+    
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="filters">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+    
+            <div id="courseContainer">
+            </div>
+    
+            <p id="creditCount">The total credits for course listed above is 6</p>
+        </section>
+    </main>
+      
+
+    <footer>
+        <div>
+            <a href="https://www.linkedin.com/in/isabellecspangler/"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/IcSpangler/wdd231"><img src="images/github.svg" alt="GitHub"></a>
+            <a href="https://x.com/"><img src="images/twitter.svg" alt="X"></a>  </div>
+        <p>&copy; <span id="year"></span> Isabelle Cavalcante Spangler | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

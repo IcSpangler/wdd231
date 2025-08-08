@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo Chamber of Commerce</title>
+    <meta name="description"
+        content="Welcome to the São Paulo Chamber of Commerce. Get news, weather, events, and featured businesses." />
+    <meta name="author" content="Isabelle C Spangler" />
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="São Paulo Chamber of Commerce" />
+    <meta property="og:description"
+        content="Directory page for local businesses in São Paulo. Discover businesses and events in your community." />
+    <meta property="og:image" content="images/sp-chamber-logo.jpg" />
+    <meta property="og:url" content="https://IcSpangler.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:type" content="website" />
+
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- FONT -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </noscript>
+    <link rel="stylesheet" href="styles/small.css" />
+
+
+</head>
+    <header>
+        <img src="images/sp.webp" alt="SP Logo" width="150" height="100" />
+        <h1>São Paulo Chamber of Commerce</h1>
+
+        <button id="menu" aria-label="Menu Button">☰</button>
+
+        <nav id="navMenu">
+            <a href="index.html" class="active">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+<body>
+    <main class="thankyou-container">
+        <h1>Thank You for Joining!</h1>
+        <p>We appreciate your interest in joining our Chamber of Commerce. Here's what we received:</p>
+
+        <div class="form-summary" id="formData"></div>
+
+        <a href="index.html" class="btn">Return to Home</a>
+    </main>
+
+    <script>
+        // Função para exibir dados da URL
+        function displayFormData() {
+            const params = new URLSearchParams(window.location.search);
+            const formDataDiv = document.getElementById('formData');
+            if ([...params].length === 0) {
+                formDataDiv.innerHTML = "<p><em>No data submitted.</em></p>";
+                return;
+            }
+
+            let html = "<ul>";
+            params.forEach((value, key) => {
+                const cleanKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                html += `<li><strong>${cleanKey}:</strong> ${decodeURIComponent(value)}</li>`;
+            });
+            html += "</ul>";
+            formDataDiv.innerHTML = html;
+        }
+
+        document.addEventListener("DOMContentLoaded", displayFormData);
+    </script>
+</body>
+<footer>
+    <p>&copy; <span id="year"></span> SP Chamber of Commerce</p>
+    <p>Isabelle C Spangler | WDD 231</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+</footer>
+
+
+<script src="scripts/weather.js"></script>
+<script src="scripts/spotlights.js"></script>
+<script src="scripts/data.js"></script>
+<script src="scripts/menu.js"></script>
+
+
+
+</body>
+
+</html>
+</html>

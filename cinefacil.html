@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CineFácil – Discover great movies based on your mood or favorite genres." />
+    <meta name="author" content="Isabelle C Spangler" />
+    <title>CineFácil – Movie Recommendations Made Easy</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/project.css" />
+
+    <!-- Scripts -->
+    <script src="scripts/website.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="CineFácil logo" class="logo" width="80" height="80" />
+            <h1>CineFácil</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="cinefacil.html" class="active">Home</a></li>
+                <li><a href="genres.html">Genres Gallery</a></li>
+                <li><a href="suggestion.html">Suggestion Page</a></li>
+
+            </ul>
+            <button id="menu" aria-label="Menu Button">☰</button>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/cinema.jpg" alt="Collage of popular movie posters" />
+        </section>
+
+        <!-- Site Purpose -->
+        <section class="card">
+            <h2>Site Purpose</h2>
+            <p>CineFácil helps you discover great movies based on your mood or favorite genres. Whether you want to
+                laugh, cry, or feel the suspense, CineFácil makes finding the perfect movie simple and fun.</p>
+            <p>From quick picks for popular films to curated genre collections, our site helps you spend less time
+                searching and more time watching.</p>
+        </section>
+
+        <!-- Scenarios -->
+        <section class="card">
+            <h2>Scenarios</h2>
+            <article>
+                <h3>Comedy Night</h3>
+                <p>“I’m in the mood for a comedy tonight. What should I watch?”
+                    Our comedy recommendations will get you laughing in no time.</p>
+            </article>
+
+            <article>
+                <h3>Thrilling Suspense</h3>
+                <p>“I love suspense movies. Can I see a list of the best ones?”
+                    We curate top-rated suspense films for an unforgettable movie night.</p>
+            </article>
+
+            <article>
+                <h3>Share Your Favorites</h3>
+                <p>“Can I suggest my favorite movie for others to see?”
+                    Yes! Visit our suggestion page to share your top picks with the community.</p>
+            </article>
+        </section>
+
+        <!-- Signup -->
+        <section class="signup">
+            <h2>Sign Up for Movie Recommendations!</h2>
+            <form id="signup-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required
+                    autocomplete="email" />
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Isabelle C Spangler | Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+<script src="scripts/menu.js"></script>
+<script src="scripts/navigation.js"></script>
+<script src="scripts/date.js"></script>
+
+</html>
