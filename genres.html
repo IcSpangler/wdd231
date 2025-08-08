@@ -20,6 +20,7 @@
 
     <!-- Scripts -->
     <script src="scripts/website.js" defer></script>
+
 </head>
 
 <body>
@@ -33,10 +34,10 @@
                 <li><a href="cinefacil.html" class="active">Home</a></li>
                 <li><a href="genres.html">Genres Gallery</a></li>
                 <li><a href="suggestion.html">Suggestion Page</a></li>
-                
             </ul>
             <button id="menu" aria-label="Menu Button">☰</button>
         </nav>
+
     </header>
 
     <main>
@@ -47,6 +48,9 @@
 
             <!-- Site Purpose -->
             <h1>Genres</h1>
+    
+
+            <section id="movies-container"></section>
             <section class="card">
                 <h2>Understanding Movie Genres</h2>
                 <p>Movies come in all shapes and styles, but they often fall into categories called <strong>genres</strong>.
@@ -98,6 +102,23 @@
         <p>&copy; <span id="currentyear"></span> | Isabelle C Spangler | Utah</p>
         <p id="lastModified"></p>
     </footer>
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+    aria-describedby="modal-desc" hidden>
+
+    <div class="modal-content">
+        <button id="modal-close" class="modal-close" aria-label="Close modal">&times;</button>
+        <h2 id="modal-title">Fall Guy</h2>
+        <p id="modal-desc">"The Fall Guy" is a 2024 action comedy film about a stuntman who returns to work after a
+            career-threatening injury to
+            help find a missing movie star. The film also explores themes of identity, sacrifice, and redemption within
+            the context
+            of the stunt industry. It's a love letter to stunt performers, showcasing the real, often unheralded, work
+            they do.</p>
+    </div>
+</div>
+
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/movies.js"></script>
 </body>
 
 </html>

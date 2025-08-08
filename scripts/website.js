@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (lastModifiedP) {
         lastModifiedP.textContent = `Last Modified: ${document.lastModified}`;
     }
+
+    // Load saved email from localStorage and pre-fill input
+    const savedEmail = localStorage.getItem('savedEmail');
+    const emailInput = document.querySelector("#signup-form input[type='email']");
+    if (savedEmail && emailInput) {
+        emailInput.value = savedEmail;
+    }
 });
 
 // ====== MOVIE SUGGESTION FORM ======
@@ -53,32 +60,10 @@ if (signupForm) {
             return;
         }
 
+        // Save email to localStorage
+        localStorage.setItem('savedEmail', email);
+
         alert(`✅ Thank you for signing up, ${email}! You will now receive movie recommendations in your inbox.`);
         signupForm.reset();
     });
 }
-async function fetchMovies() {
-    try {
-        const response = await fetch('data/movies.json');
-        if (!response.ok) throw new Error('Network error');
-        const movies = await response.json();
-
-        const container = document.querySelector('#movies-container');
-        container.innerHTML = '';
-
-        movies.slice(0, 15).forEach(movie => {
-            container.innerHTML += `
-        <article class="movie-card">
-          <h3>${movie.title}</h3>
-          <p>Genre: ${movie.genre}</p>
-          <p>Year: ${movie.year}</p>
-          <p>Rating: ${movie.rating}</p>
-        </article>
-      `;
-        });
-    } catch (error) {
-        console.error('Fetch failed:', error);
-    }
-}
-
-fetchMovies();

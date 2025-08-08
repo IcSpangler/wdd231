@@ -18,9 +18,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/project.css" />
 
-    <!-- Scripts -->
-     <script src="scripts/navigation.js"></script>
-
 </head>
 
 <body>
@@ -31,22 +28,17 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <a href="cinefacil.html" class="active">Home</a>
-                <a href="genres.html">Genres Gallery</a>
-                <a href="suggestion.html">Suggestion Page</a>
+                <li><a href="cinefacil.html" class="active">Home</a></li>
+                <li><a href="genres.html">Genres Gallery</a></li>
+                <li><a href="suggestion.html">Suggestion Page</a></li>
             </ul>
             <button id="menu" aria-label="Menu Button">☰</button>
-            <script src="scripts/menu.js"></script>
         </nav>
+
     </header>
 
     <main>
-        <main>
-            <section id="movies-container">
-                <!-- Movie cards will be dynamically inserted here -->
-            </section>
-        </main>
-
+        
         <section class="card-suggestion">
             <h2>Suggest a Movie</h2>
             <p>Do you have a favorite movie that others should watch? Share it with us, and it might appear in our
@@ -90,7 +82,7 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/date.js"></script>
+    <script src="scripts/menu.js"></script>
 </body>
-
 
 </html>
