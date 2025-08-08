@@ -7,14 +7,13 @@
     --text-color: black;
 }
 
-/* Reset básico para garantir uma base consistente */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body e fontes principais */
 body {
     font-family: 'Merriweather',
         serif;
