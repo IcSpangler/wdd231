@@ -1,12 +1,9 @@
-const menuButton = document.getElementById('menu');
-const nav = document.getElementById('navMenu');
+// scripts/menu.js or scripts/navigation.js
+document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById("menu");
+    const navLinks = document.querySelector(".nav-links");
 
-menuButton.addEventListener('click', () => {
-    nav.classList.toggle('show'); // alterna a visibilidade do menu
-});
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 640) {
-        nav.classList.remove('show'); // Corrigido: era 'navMenu' (não declarado)
-    }
+    menuButton.addEventListener("click", () => {
+        navLinks.classList.toggle("open"); // toggle CSS class
+    });
 });
