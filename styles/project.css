@@ -71,20 +71,6 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Video Section */
-video {
-    width: auto;
-    margin: 20px 0;
-}
-
-.video video {
-    width: 200;
-    object-fit: cover;
-    height: auto;
-
-}
-
-
 /* Hero Section */
 .hero img {
     width: 100%;
@@ -92,8 +78,6 @@ video {
     max-height: 600px;
     object-fit: cover;
 }
-
-
 
 /* Card Section */
 .card {
