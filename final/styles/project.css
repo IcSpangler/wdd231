@@ -611,3 +611,13 @@ nav {
      clip: rect(0, 0, 0, 0);
      border: 0;
  }
+ .header-content {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .active {
+     color: var(--primary-color);
+     font-weight: bold;
+ }
