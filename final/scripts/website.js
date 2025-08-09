@@ -1,6 +1,3 @@
-// website.js
-
-// ====== FOOTER YEAR AND LAST MODIFIED ======
 document.addEventListener("DOMContentLoaded", () => {
     const currentYearSpan = document.getElementById("currentyear");
     const lastModifiedP = document.getElementById("lastModified");
