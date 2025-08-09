@@ -57,7 +57,13 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <img src="images/cinema.jpg" alt="Collage of popular movie posters">
+        <!-- Above the fold — load immediately -->
+        <img src="images/cinema.jpg" alt="CineFácil logo" class="logo" width="80" height="80">
+        
+        <!-- Below the fold — lazy load -->
+        <img src="images/popcorn.jpg" alt="Collage of popular movie posters" loading="lazy">
+    
+
         </section>
 
         <!-- Site Purpose -->
