@@ -1,92 +1,122 @@
 [
     {
+        "id": 1,
         "title": "Inception",
         "genre": "Science Fiction",
         "year": 2010,
-        "rating": "PG-13"
+        "rating": "PG-13",
+        "description": "A thief who steals corporate secrets through dream-sharing technology is given a task to plant an idea into a CEO's mind."
     },
     {
+        "id": 2,
         "title": "The Godfather",
         "genre": "Drama",
         "year": 1972,
-        "rating": "R"
+        "rating": "R",
+        "description": "The aging patriarch of an organized crime dynasty transfers control of his empire to his reluctant son."
     },
     {
+        "id": 3,
         "title": "The Dark Knight",
         "genre": "Action",
         "year": 2008,
-        "rating": "PG-13"
+        "rating": "PG-13",
+        "description": "Batman battles the Joker, a criminal mastermind who wants to create chaos in Gotham City."
     },
     {
+        "id": 4,
         "title": "Pulp Fiction",
         "genre": "Crime",
         "year": 1994,
-        "rating": "R"
+        "rating": "R",
+        "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in tales of violence and redemption."
     },
     {
+        "id": 5,
         "title": "Forrest Gump",
         "genre": "Drama",
         "year": 1994,
-        "rating": "PG-13"
+        "rating": "PG-13",
+        "description": "The story of a slow-witted but kind-hearted man from Alabama and his epic journey through historical moments."
     },
     {
+        "id": 6,
         "title": "The Matrix",
         "genre": "Science Fiction",
         "year": 1999,
-        "rating": "R"
+        "rating": "R",
+        "description": "A hacker discovers reality is a simulation and joins a rebellion against its controllers."
     },
     {
+        "id": 7,
         "title": "Titanic",
         "genre": "Romance",
         "year": 1997,
-        "rating": "PG-13"
+        "rating": "PG-13",
+        "description": "A young couple falls in love aboard the ill-fated RMS Titanic."
     },
     {
+        "id": 8,
         "title": "The Avengers",
         "genre": "Action",
         "year": 2012,
-        "rating": "PG-13"
+        "rating": "PG-13",
+        "description": "Earth's mightiest heroes team up to stop an alien invasion."
     },
     {
+        "id": 9,
         "title": "Gladiator",
         "genre": "Action",
         "year": 2000,
-        "rating": "R"
+        "rating": "R",
+        "description": "A betrayed Roman general seeks revenge against the corrupt emperor."
     },
     {
+        "id": 10,
         "title": "Frozen",
         "genre": "Animation",
         "year": 2013,
-        "rating": "PG"
+        "rating": "PG",
+        "description": "Two sisters discover the power of love and family in a snowy kingdom."
     },
     {
+        "id": 11,
         "title": "The Lion King",
         "genre": "Animation",
         "year": 1994,
-        "rating": "G"
+        "rating": "G",
+        "description": "A lion cub prince flees his kingdom only to learn the true meaning of responsibility and bravery."
     },
     {
+        "id": 12,
         "title": "Get Out",
         "genre": "Horror",
         "year": 2017,
-        "rating": "R"
+        "rating": "R",
+        "description": "A young African-American visits his white girlfriend’s family estate and uncovers disturbing secrets."
     },
     {
+        "id": 13,
         "title": "Jurassic Park",
         "genre": "Science Fiction",
         "year": 1993,
-        "rating": "PG-13"
+        "rating": "PG-13",
+        "description": "Scientists clone dinosaurs for a theme park, but things go terribly wrong."
     },
     {
+        "id": 14,
         "title": "The Shawshank Redemption",
         "genre": "Drama",
         "year": 1994,
-        "rating": "R"
+        "rating": "R",
+        "description": "Two imprisoned men bond over years, finding solace and eventual redemption."
     },
     {
+        "id": 15,
         "title": "La La Land",
         "genre": "Romance",
         "year": 2016,
-        "rating": "PG-13"
+        "rating": "PG-13",
+        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams in Los Angeles."
     }
 ]
