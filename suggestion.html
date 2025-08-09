@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CineFácil – Discover great movies based on your mood or favorite genres." />
+    <meta name="author" content="Isabelle C Spangler" />
+    <title>CineFácil – Movie Recommendations Made Easy</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/project.css" />
+
+    <!-- Scripts -->
+     <script src="scripts/navigation.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="CineFácil logo" class="logo" width="80" height="80" />
+            <h1>CineFácil</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="cinefacil.html" class="active">Home</a></li>
+                <li><a href="genres.html">Genres Gallery</a></li>
+                <li><a href="suggestion.html">Suggestion Page</a></li>
+            </ul>
+            <button id="menu" aria-label="Menu Button">☰</button>
+            <script src="scripts/menu.js"></script>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="card-suggestion">
+            <h2>Suggest a Movie</h2>
+            <p>Do you have a favorite movie that others should watch? Share it with us, and it might appear in our
+                recommendations list!</p>
+
+            <form action="#" method="POST" class="suggestion-form">
+                <label for="movie-title">Movie Title:</label>
+                <input type="text" id="movie-title" name="movie-title" placeholder="Enter movie title" required>
+
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre" required>
+                    <option value="">-- Select a Genre --</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="suspense">Suspense</option>
+                    <option value="action">Action</option>
+                    <option value="romance">Romance</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="animation">Animation</option>
+                </select>
+
+                <label for="why">Why do you recommend this movie?</label>
+                <textarea id="why" name="why" rows="4" placeholder="Tell us why this movie is worth watching..."
+                    required></textarea>
+
+                <button type="submit">Submit Suggestion</button>
+            </form>
+        </section>
+
+        <section class="signup">
+            <h2>Sign Up for Movie Recommendations!</h2>
+            <form id="signup-form">
+                <input type="email" placeholder="Your e-mail" required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Isabelle C Spangler | Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/date.js"></script>
+</body>
+
+
+</html>

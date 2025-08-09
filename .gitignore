@@ -1,0 +1,4 @@
+# Ignorar arquivos de sistema do macOS
+.DS_Store
+chamber/.DS_Store
+chamber/images/.DS_Store
