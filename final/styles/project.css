@@ -645,3 +645,20 @@ nav {
      color: var(--primary-color);
      font-weight: bold;
  }
+ footer p {
+     margin: 10px 0;
+ }
+
+ footer .video-link a {
+     color: #C94277;
+     /* Accent pink/red color */
+     font-weight: 600;
+     text-decoration: none;
+     transition: color 0.3s ease;
+ }
+
+ footer .video-link a:hover,
+ footer .video-link a:focus {
+     color: #FFF;
+     text-decoration: underline;
+ }
