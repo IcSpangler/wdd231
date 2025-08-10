@@ -3,48 +3,48 @@
         "name": "Avenida Paulista",
         "address": "Av. Paulista, São Paulo - SP, Brazil",
         "description": "São Paulo’s iconic cultural and financial avenue, lined with museums, shopping centers, restaurants, and cultural attractions. A lively pedestrian zone on Sundays.",
-        "image": ""
+        "image": "images/avenida.webp"
     },
     {
         "name": "Parque Ibirapuera",
         "address": "Av. Pedro Álvares Cabral, Vila Mariana, São Paulo - SP, Brazil",
         "description": "A 158-hectare urban park featuring lakes, museums, gardens, and jogging paths. One of the most visited parks in South America.",
-        "image": ""
+        "image": "images/ibirapuera.webp"
     },
     {
         "name": "Mercado Municipal de São Paulo",
         "address": "R. da Cantareira, 306, Centro Histórico, São Paulo - SP, 01024-900, Brazil",
         "description": "Historic market opened in 1933, famous for its stained-glass windows and gourmet offerings including the iconic mortadella sandwich.",
-        "image": ""
+        "image": "images/mercadao.webp"
     },
     {
         "name": "Pinacoteca do Estado",
         "address": "Praça da Luz, Luz, São Paulo - SP, Brazil",
         "description": "Founded in 1905, this is Brazil’s oldest art museum, showcasing Brazilian art from the 19th century to contemporary works.",
-        "image": ""
+        "image": "images/pinacoteca.webp"
     },
     {
         "name": "MASP – Museu de Arte de São Paulo",
         "address": "Av. Paulista, 1578, São Paulo - SP, Brazil",
         "description": "One of Latin America’s most important art museums, housed in an iconic building designed by Lina Bo Bardi, with a collection spanning European and Brazilian masters.",
-        "image": ""
+        "image": "images/maspp.webp"
     },
     {
         "name": "Catedral da Sé",
         "address": "Praça da Sé, Sé, São Paulo - SP, 01001-000, Brazil",
         "description": "A grand Neo-Gothic cathedral with towering spires and one of the largest pipe organs in South America, seating up to 8,000 people.",
-        "image": ""
+        "image": "images/catedral.webp"
     },
     {
         "name": "Estádio do Pacaembu / Museu do Futebol",
         "address": "Praça Charles Miller, s/n, São Paulo - SP, Brazil",
         "description": "Historic stadium housing the Football Museum, featuring interactive exhibits about the history and culture of Brazilian soccer.",
-        "image": ""
+        "image": "images/estadio.webp"
     },
     {
         "name": "Liberdade (Bairro Japonês)",
         "address": "Liberdade, Sé, São Paulo - SP, Brazil",
         "description": "São Paulo’s Japantown, known for its lantern-lined streets, Japanese restaurants, markets, and vibrant cultural festivals.",
-        "image": ""
+        "image": "images/liberdade.webp"
     }
 ]
