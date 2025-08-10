@@ -37,7 +37,7 @@ function setupEventListeners() {
             if (movie) openModal(movie.title, movie.description);
         } else if (e.target.classList.contains('fav-btn')) {
             toggleFavorite(movieId);
-            renderMovies(); // re-render para atualizar botões
+            renderMovies(); 
         }
     });
 }

@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// ====== MOVIE SUGGESTION FORM ======
+// MOVIE SUGGESTION FORM 
 const suggestionForm = document.querySelector(".suggestion-form");
 
 if (suggestionForm) {
     suggestionForm.addEventListener("submit", (event) => {
-        event.preventDefault(); // Prevent page refresh
+        event.preventDefault(); 
 
         // Get form values
         const movieTitle = document.getElementById("movie-title").value.trim();
@@ -35,15 +35,15 @@ if (suggestionForm) {
             return;
         }
 
-        // Show success message
+   
         alert(`🎬 Thank you for suggesting "${movieTitle}" in the ${genre} category! We appreciate your recommendation.`);
 
-        // Clear the form
+      
         suggestionForm.reset();
     });
 }
 
-// ====== EMAIL SIGNUP FORM ======
+//  EMAIL SIGNUP FORM 
 const signupForm = document.getElementById("signup-form");
 
 if (signupForm) {
