@@ -1,6 +1,11 @@
 const dataUrl = "data/discover.json";
 const container = document.querySelector("#discover-container");
-const visitMessage = document.querySelector("#last-visit");
+
+// Modal elements
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modal-title");
+const modalDescription = document.getElementById("modal-description");
+const modalClose = document.getElementById("modal-close");
 
 async function loadDiscoverCards() {
     try {
@@ -30,7 +35,9 @@ async function loadDiscoverCards() {
             const button = document.createElement("button");
             button.textContent = "Learn More";
             button.addEventListener("click", () => {
-                alert(`More about ${place.name} coming soon!`);
+                modalTitle.textContent = place.name;
+                modalDescription.textContent = place.description;
+                modal.hidden = false;
             });
 
             card.appendChild(title);
@@ -46,6 +53,21 @@ async function loadDiscoverCards() {
         console.error("Error loading discover data:", error);
     }
 }
+
+// Fecha a modal quando clicar no botão fechar
+modalClose.addEventListener("click", () => {
+    modal.hidden = true;
+});
+
+// Fecha a modal se clicar fora do conteúdo
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.hidden = true;
+    }
+});
+
+loadDiscoverCards();
+
 
 function displayLastVisit() {
     const lastVisit = localStorage.getItem("lastVisit");
